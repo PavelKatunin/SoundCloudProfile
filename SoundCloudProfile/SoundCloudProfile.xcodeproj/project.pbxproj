@@ -1,0 +1,806 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		761507A021206FA10016E397 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7615079F21206FA10016E397 /* AppDelegate.m */; };
+		761507A621206FA10016E397 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 761507A421206FA10016E397 /* Main.storyboard */; };
+		761507A821206FA20016E397 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 761507A721206FA20016E397 /* Assets.xcassets */; };
+		761507AB21206FA20016E397 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 761507A921206FA20016E397 /* LaunchScreen.storyboard */; };
+		761507AE21206FA20016E397 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 761507AD21206FA20016E397 /* main.m */; };
+		761507B821206FA30016E397 /* SoundCloudProfileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 761507B721206FA30016E397 /* SoundCloudProfileTests.m */; };
+		761507C321206FA30016E397 /* SoundCloudProfileUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 761507C221206FA30016E397 /* SoundCloudProfileUITests.m */; };
+		761507DF212071330016E397 /* SCRemoteTracksService.m in Sources */ = {isa = PBXBuildFile; fileRef = 761507DE212071330016E397 /* SCRemoteTracksService.m */; };
+		761507E2212071470016E397 /* SCRemoteProfileService.m in Sources */ = {isa = PBXBuildFile; fileRef = 761507E1212071470016E397 /* SCRemoteProfileService.m */; };
+		761507E52120715E0016E397 /* SCRemoteHTTPService.m in Sources */ = {isa = PBXBuildFile; fileRef = 761507E42120715E0016E397 /* SCRemoteHTTPService.m */; };
+		761507EA212071F40016E397 /* SCServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 761507E9212071F40016E397 /* SCServices.m */; };
+		761507F72120748E0016E397 /* SCRemoteUserService.m in Sources */ = {isa = PBXBuildFile; fileRef = 761507F62120748E0016E397 /* SCRemoteUserService.m */; };
+		761507FB212075090016E397 /* SCProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 761507FA212075090016E397 /* SCProfile.m */; };
+		761507FE212075250016E397 /* SCTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 761507FD212075250016E397 /* SCTrack.m */; };
+		761508012120753D0016E397 /* SCUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 761508002120753D0016E397 /* SCUser.m */; };
+		761508072120758E0016E397 /* GetUserOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 761508062120758E0016E397 /* GetUserOperation.m */; };
+		7615080A212075B50016E397 /* GetFavoritTracksOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 76150809212075B50016E397 /* GetFavoritTracksOperation.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		761507B421206FA30016E397 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7615079321206FA10016E397 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7615079A21206FA10016E397;
+			remoteInfo = SoundCloudProfile;
+		};
+		761507BF21206FA30016E397 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7615079321206FA10016E397 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7615079A21206FA10016E397;
+			remoteInfo = SoundCloudProfile;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7615079B21206FA10016E397 /* SoundCloudProfile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundCloudProfile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7615079E21206FA10016E397 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7615079F21206FA10016E397 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		761507A521206FA10016E397 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		761507A721206FA20016E397 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		761507AA21206FA20016E397 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		761507AC21206FA20016E397 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		761507AD21206FA20016E397 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		761507B321206FA30016E397 /* SoundCloudProfileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoundCloudProfileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		761507B721206FA30016E397 /* SoundCloudProfileTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoundCloudProfileTests.m; sourceTree = "<group>"; };
+		761507B921206FA30016E397 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		761507BE21206FA30016E397 /* SoundCloudProfileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoundCloudProfileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		761507C221206FA30016E397 /* SoundCloudProfileUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoundCloudProfileUITests.m; sourceTree = "<group>"; };
+		761507C421206FA30016E397 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		761507D7212070460016E397 /* SCSongsListProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCSongsListProtocols.h; sourceTree = "<group>"; };
+		761507D8212070590016E397 /* SCProfileInfoProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCProfileInfoProtocols.h; sourceTree = "<group>"; };
+		761507D9212070780016E397 /* SCHTTPService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCHTTPService.h; sourceTree = "<group>"; };
+		761507DB212070AE0016E397 /* SCProfileService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCProfileService.h; sourceTree = "<group>"; };
+		761507DC212070BC0016E397 /* SCTracksService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCTracksService.h; sourceTree = "<group>"; };
+		761507DD212071330016E397 /* SCRemoteTracksService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCRemoteTracksService.h; sourceTree = "<group>"; };
+		761507DE212071330016E397 /* SCRemoteTracksService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCRemoteTracksService.m; sourceTree = "<group>"; };
+		761507E0212071470016E397 /* SCRemoteProfileService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCRemoteProfileService.h; sourceTree = "<group>"; };
+		761507E1212071470016E397 /* SCRemoteProfileService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCRemoteProfileService.m; sourceTree = "<group>"; };
+		761507E32120715E0016E397 /* SCRemoteHTTPService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCRemoteHTTPService.h; sourceTree = "<group>"; };
+		761507E42120715E0016E397 /* SCRemoteHTTPService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCRemoteHTTPService.m; sourceTree = "<group>"; };
+		761507E72120718D0016E397 /* SCServicesProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCServicesProvider.h; sourceTree = "<group>"; };
+		761507E8212071F40016E397 /* SCServices.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCServices.h; sourceTree = "<group>"; };
+		761507E9212071F40016E397 /* SCServices.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCServices.m; sourceTree = "<group>"; };
+		761507ED212072350016E397 /* SCTracksParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCTracksParser.h; sourceTree = "<group>"; };
+		761507EE212072460016E397 /* SCProfileParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCProfileParser.h; sourceTree = "<group>"; };
+		761507F22120731A0016E397 /* UserInfoProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfoProtocols.h; sourceTree = "<group>"; };
+		761507F4212074770016E397 /* SCUserService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCUserService.h; sourceTree = "<group>"; };
+		761507F52120748E0016E397 /* SCRemoteUserService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCRemoteUserService.h; sourceTree = "<group>"; };
+		761507F62120748E0016E397 /* SCRemoteUserService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCRemoteUserService.m; sourceTree = "<group>"; };
+		761507F9212075090016E397 /* SCProfile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCProfile.h; sourceTree = "<group>"; };
+		761507FA212075090016E397 /* SCProfile.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCProfile.m; sourceTree = "<group>"; };
+		761507FC212075250016E397 /* SCTrack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCTrack.h; sourceTree = "<group>"; };
+		761507FD212075250016E397 /* SCTrack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCTrack.m; sourceTree = "<group>"; };
+		761507FF2120753D0016E397 /* SCUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCUser.h; sourceTree = "<group>"; };
+		761508002120753D0016E397 /* SCUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCUser.m; sourceTree = "<group>"; };
+		761508052120758E0016E397 /* GetUserOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetUserOperation.h; sourceTree = "<group>"; };
+		761508062120758E0016E397 /* GetUserOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetUserOperation.m; sourceTree = "<group>"; };
+		76150808212075B50016E397 /* GetFavoritTracksOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetFavoritTracksOperation.h; sourceTree = "<group>"; };
+		76150809212075B50016E397 /* GetFavoritTracksOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetFavoritTracksOperation.m; sourceTree = "<group>"; };
+		7615080B2120764C0016E397 /* SCUserServiceObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCUserServiceObserver.h; sourceTree = "<group>"; };
+		7615080C2120765C0016E397 /* SCTracksServiceObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCTracksServiceObserver.h; sourceTree = "<group>"; };
+		7615080D212076800016E397 /* SCProfileServiceObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCProfileServiceObserver.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7615079821206FA10016E397 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		761507B021206FA30016E397 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		761507BB21206FA30016E397 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7615079221206FA10016E397 = {
+			isa = PBXGroup;
+			children = (
+				7615079D21206FA10016E397 /* SoundCloudProfile */,
+				761507B621206FA30016E397 /* SoundCloudProfileTests */,
+				761507C121206FA30016E397 /* SoundCloudProfileUITests */,
+				7615079C21206FA10016E397 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7615079C21206FA10016E397 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7615079B21206FA10016E397 /* SoundCloudProfile.app */,
+				761507B321206FA30016E397 /* SoundCloudProfileTests.xctest */,
+				761507BE21206FA30016E397 /* SoundCloudProfileUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7615079D21206FA10016E397 /* SoundCloudProfile */ = {
+			isa = PBXGroup;
+			children = (
+				761507DA212070880016E397 /* Entities */,
+				761507D121206FB80016E397 /* Serivces */,
+				761507D021206FB10016E397 /* Modules */,
+				7615079E21206FA10016E397 /* AppDelegate.h */,
+				7615079F21206FA10016E397 /* AppDelegate.m */,
+				761507A421206FA10016E397 /* Main.storyboard */,
+				761507A721206FA20016E397 /* Assets.xcassets */,
+				761507A921206FA20016E397 /* LaunchScreen.storyboard */,
+				761507AC21206FA20016E397 /* Info.plist */,
+				761507AD21206FA20016E397 /* main.m */,
+			);
+			path = SoundCloudProfile;
+			sourceTree = "<group>";
+		};
+		761507B621206FA30016E397 /* SoundCloudProfileTests */ = {
+			isa = PBXGroup;
+			children = (
+				761507B721206FA30016E397 /* SoundCloudProfileTests.m */,
+				761507B921206FA30016E397 /* Info.plist */,
+			);
+			path = SoundCloudProfileTests;
+			sourceTree = "<group>";
+		};
+		761507C121206FA30016E397 /* SoundCloudProfileUITests */ = {
+			isa = PBXGroup;
+			children = (
+				761507C221206FA30016E397 /* SoundCloudProfileUITests.m */,
+				761507C421206FA30016E397 /* Info.plist */,
+			);
+			path = SoundCloudProfileUITests;
+			sourceTree = "<group>";
+		};
+		761507D021206FB10016E397 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				761507F1212072FC0016E397 /* UserInfo */,
+				761507D321206FCC0016E397 /* SongsList */,
+				761507D221206FC30016E397 /* ProfileInfo */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		761507D121206FB80016E397 /* Serivces */ = {
+			isa = PBXGroup;
+			children = (
+				761507F3212073870016E397 /* UserService */,
+				761507D6212070060016E397 /* TracksService */,
+				761507D521206FE20016E397 /* ProfileService */,
+				761507D421206FDA0016E397 /* HTTPService */,
+				761507E72120718D0016E397 /* SCServicesProvider.h */,
+				761507E8212071F40016E397 /* SCServices.h */,
+				761507E9212071F40016E397 /* SCServices.m */,
+			);
+			path = Serivces;
+			sourceTree = "<group>";
+		};
+		761507D221206FC30016E397 /* ProfileInfo */ = {
+			isa = PBXGroup;
+			children = (
+				761507D8212070590016E397 /* SCProfileInfoProtocols.h */,
+			);
+			path = ProfileInfo;
+			sourceTree = "<group>";
+		};
+		761507D321206FCC0016E397 /* SongsList */ = {
+			isa = PBXGroup;
+			children = (
+				761507D7212070460016E397 /* SCSongsListProtocols.h */,
+			);
+			path = SongsList;
+			sourceTree = "<group>";
+		};
+		761507D421206FDA0016E397 /* HTTPService */ = {
+			isa = PBXGroup;
+			children = (
+				761507D9212070780016E397 /* SCHTTPService.h */,
+				761507E32120715E0016E397 /* SCRemoteHTTPService.h */,
+				761507E42120715E0016E397 /* SCRemoteHTTPService.m */,
+			);
+			path = HTTPService;
+			sourceTree = "<group>";
+		};
+		761507D521206FE20016E397 /* ProfileService */ = {
+			isa = PBXGroup;
+			children = (
+				761508022120755A0016E397 /* Operations */,
+				761507EB2120720C0016E397 /* Parser */,
+				761507DB212070AE0016E397 /* SCProfileService.h */,
+				761507E0212071470016E397 /* SCRemoteProfileService.h */,
+				761507E1212071470016E397 /* SCRemoteProfileService.m */,
+				7615080D212076800016E397 /* SCProfileServiceObserver.h */,
+			);
+			path = ProfileService;
+			sourceTree = "<group>";
+		};
+		761507D6212070060016E397 /* TracksService */ = {
+			isa = PBXGroup;
+			children = (
+				76150803212075600016E397 /* Operations */,
+				761507EC212072110016E397 /* Parser */,
+				761507DC212070BC0016E397 /* SCTracksService.h */,
+				761507DD212071330016E397 /* SCRemoteTracksService.h */,
+				761507DE212071330016E397 /* SCRemoteTracksService.m */,
+				7615080C2120765C0016E397 /* SCTracksServiceObserver.h */,
+			);
+			path = TracksService;
+			sourceTree = "<group>";
+		};
+		761507DA212070880016E397 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				761507F8212074A10016E397 /* Profile */,
+				761507F02120725B0016E397 /* Track */,
+				761507EF212072560016E397 /* User */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		761507EB2120720C0016E397 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				761507EE212072460016E397 /* SCProfileParser.h */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		761507EC212072110016E397 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				761507ED212072350016E397 /* SCTracksParser.h */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		761507EF212072560016E397 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				761507FF2120753D0016E397 /* SCUser.h */,
+				761508002120753D0016E397 /* SCUser.m */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		761507F02120725B0016E397 /* Track */ = {
+			isa = PBXGroup;
+			children = (
+				761507FC212075250016E397 /* SCTrack.h */,
+				761507FD212075250016E397 /* SCTrack.m */,
+			);
+			path = Track;
+			sourceTree = "<group>";
+		};
+		761507F1212072FC0016E397 /* UserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				761507F22120731A0016E397 /* UserInfoProtocols.h */,
+			);
+			path = UserInfo;
+			sourceTree = "<group>";
+		};
+		761507F3212073870016E397 /* UserService */ = {
+			isa = PBXGroup;
+			children = (
+				76150804212075660016E397 /* Operations */,
+				761507F4212074770016E397 /* SCUserService.h */,
+				761507F52120748E0016E397 /* SCRemoteUserService.h */,
+				761507F62120748E0016E397 /* SCRemoteUserService.m */,
+				7615080B2120764C0016E397 /* SCUserServiceObserver.h */,
+			);
+			path = UserService;
+			sourceTree = "<group>";
+		};
+		761507F8212074A10016E397 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				761507F9212075090016E397 /* SCProfile.h */,
+				761507FA212075090016E397 /* SCProfile.m */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		761508022120755A0016E397 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		76150803212075600016E397 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				76150808212075B50016E397 /* GetFavoritTracksOperation.h */,
+				76150809212075B50016E397 /* GetFavoritTracksOperation.m */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		76150804212075660016E397 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				761508052120758E0016E397 /* GetUserOperation.h */,
+				761508062120758E0016E397 /* GetUserOperation.m */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7615079A21206FA10016E397 /* SoundCloudProfile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 761507C721206FA30016E397 /* Build configuration list for PBXNativeTarget "SoundCloudProfile" */;
+			buildPhases = (
+				7615079721206FA10016E397 /* Sources */,
+				7615079821206FA10016E397 /* Frameworks */,
+				7615079921206FA10016E397 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SoundCloudProfile;
+			productName = SoundCloudProfile;
+			productReference = 7615079B21206FA10016E397 /* SoundCloudProfile.app */;
+			productType = "com.apple.product-type.application";
+		};
+		761507B221206FA30016E397 /* SoundCloudProfileTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 761507CA21206FA30016E397 /* Build configuration list for PBXNativeTarget "SoundCloudProfileTests" */;
+			buildPhases = (
+				761507AF21206FA30016E397 /* Sources */,
+				761507B021206FA30016E397 /* Frameworks */,
+				761507B121206FA30016E397 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				761507B521206FA30016E397 /* PBXTargetDependency */,
+			);
+			name = SoundCloudProfileTests;
+			productName = SoundCloudProfileTests;
+			productReference = 761507B321206FA30016E397 /* SoundCloudProfileTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		761507BD21206FA30016E397 /* SoundCloudProfileUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 761507CD21206FA30016E397 /* Build configuration list for PBXNativeTarget "SoundCloudProfileUITests" */;
+			buildPhases = (
+				761507BA21206FA30016E397 /* Sources */,
+				761507BB21206FA30016E397 /* Frameworks */,
+				761507BC21206FA30016E397 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				761507C021206FA30016E397 /* PBXTargetDependency */,
+			);
+			name = SoundCloudProfileUITests;
+			productName = SoundCloudProfileUITests;
+			productReference = 761507BE21206FA30016E397 /* SoundCloudProfileUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7615079321206FA10016E397 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = PavelKatunin;
+				TargetAttributes = {
+					7615079A21206FA10016E397 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					761507B221206FA30016E397 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 7615079A21206FA10016E397;
+					};
+					761507BD21206FA30016E397 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 7615079A21206FA10016E397;
+					};
+				};
+			};
+			buildConfigurationList = 7615079621206FA10016E397 /* Build configuration list for PBXProject "SoundCloudProfile" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7615079221206FA10016E397;
+			productRefGroup = 7615079C21206FA10016E397 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7615079A21206FA10016E397 /* SoundCloudProfile */,
+				761507B221206FA30016E397 /* SoundCloudProfileTests */,
+				761507BD21206FA30016E397 /* SoundCloudProfileUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7615079921206FA10016E397 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				761507AB21206FA20016E397 /* LaunchScreen.storyboard in Resources */,
+				761507A821206FA20016E397 /* Assets.xcassets in Resources */,
+				761507A621206FA10016E397 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		761507B121206FA30016E397 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		761507BC21206FA30016E397 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7615079721206FA10016E397 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				761507F72120748E0016E397 /* SCRemoteUserService.m in Sources */,
+				761507AE21206FA20016E397 /* main.m in Sources */,
+				761507A021206FA10016E397 /* AppDelegate.m in Sources */,
+				761508072120758E0016E397 /* GetUserOperation.m in Sources */,
+				761507DF212071330016E397 /* SCRemoteTracksService.m in Sources */,
+				761508012120753D0016E397 /* SCUser.m in Sources */,
+				7615080A212075B50016E397 /* GetFavoritTracksOperation.m in Sources */,
+				761507FE212075250016E397 /* SCTrack.m in Sources */,
+				761507EA212071F40016E397 /* SCServices.m in Sources */,
+				761507FB212075090016E397 /* SCProfile.m in Sources */,
+				761507E52120715E0016E397 /* SCRemoteHTTPService.m in Sources */,
+				761507E2212071470016E397 /* SCRemoteProfileService.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		761507AF21206FA30016E397 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				761507B821206FA30016E397 /* SoundCloudProfileTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		761507BA21206FA30016E397 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				761507C321206FA30016E397 /* SoundCloudProfileUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		761507B521206FA30016E397 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7615079A21206FA10016E397 /* SoundCloudProfile */;
+			targetProxy = 761507B421206FA30016E397 /* PBXContainerItemProxy */;
+		};
+		761507C021206FA30016E397 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7615079A21206FA10016E397 /* SoundCloudProfile */;
+			targetProxy = 761507BF21206FA30016E397 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		761507A421206FA10016E397 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				761507A521206FA10016E397 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		761507A921206FA20016E397 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				761507AA21206FA20016E397 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		761507C521206FA30016E397 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		761507C621206FA30016E397 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		761507C821206FA30016E397 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 384BUBT636;
+				INFOPLIST_FILE = SoundCloudProfile/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = PavelKatunin.SoundCloudProfile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		761507C921206FA30016E397 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 384BUBT636;
+				INFOPLIST_FILE = SoundCloudProfile/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = PavelKatunin.SoundCloudProfile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		761507CB21206FA30016E397 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 384BUBT636;
+				INFOPLIST_FILE = SoundCloudProfileTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = PavelKatunin.SoundCloudProfileTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SoundCloudProfile.app/SoundCloudProfile";
+			};
+			name = Debug;
+		};
+		761507CC21206FA30016E397 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 384BUBT636;
+				INFOPLIST_FILE = SoundCloudProfileTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = PavelKatunin.SoundCloudProfileTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SoundCloudProfile.app/SoundCloudProfile";
+			};
+			name = Release;
+		};
+		761507CE21206FA30016E397 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 384BUBT636;
+				INFOPLIST_FILE = SoundCloudProfileUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = PavelKatunin.SoundCloudProfileUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SoundCloudProfile;
+			};
+			name = Debug;
+		};
+		761507CF21206FA30016E397 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 384BUBT636;
+				INFOPLIST_FILE = SoundCloudProfileUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = PavelKatunin.SoundCloudProfileUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SoundCloudProfile;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7615079621206FA10016E397 /* Build configuration list for PBXProject "SoundCloudProfile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				761507C521206FA30016E397 /* Debug */,
+				761507C621206FA30016E397 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		761507C721206FA30016E397 /* Build configuration list for PBXNativeTarget "SoundCloudProfile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				761507C821206FA30016E397 /* Debug */,
+				761507C921206FA30016E397 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		761507CA21206FA30016E397 /* Build configuration list for PBXNativeTarget "SoundCloudProfileTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				761507CB21206FA30016E397 /* Debug */,
+				761507CC21206FA30016E397 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		761507CD21206FA30016E397 /* Build configuration list for PBXNativeTarget "SoundCloudProfileUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				761507CE21206FA30016E397 /* Debug */,
+				761507CF21206FA30016E397 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7615079321206FA10016E397 /* Project object */;
+}

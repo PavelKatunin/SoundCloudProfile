@@ -1,5 +1,13 @@
 #import <Foundation/Foundation.h>
 
-@protocol ProfileInfoProtocols <NSObject>
+@protocol SCProfileInfoInput <NSObject>
+
+@end
+
+@protocol SCProfileInfoPresenterProtocol <NSObject>
+
+@end
+
+@protocol SCProfileInfoViewProtocol <NSObject>
 
 @end

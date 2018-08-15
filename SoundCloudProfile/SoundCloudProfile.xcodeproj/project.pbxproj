@@ -24,6 +24,16 @@
 		761508012120753D0016E397 /* SCUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 761508002120753D0016E397 /* SCUser.m */; };
 		761508072120758E0016E397 /* GetUserOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 761508062120758E0016E397 /* GetUserOperation.m */; };
 		7615080A212075B50016E397 /* GetFavoritTracksOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 76150809212075B50016E397 /* GetFavoritTracksOperation.m */; };
+		76729CF3212164C100F720BA /* NSDictionary+HTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 76729CF2212164C100F720BA /* NSDictionary+HTTP.m */; };
+		76729CF6212168A300F720BA /* NSString+HTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 76729CF5212168A300F720BA /* NSString+HTTP.m */; };
+		76729CFA2121694100F720BA /* NSDictionaryHTTPTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 76729CF92121694100F720BA /* NSDictionaryHTTPTests.m */; };
+		76729CFC2121695800F720BA /* NSStringHTTPTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 76729CFB2121695800F720BA /* NSStringHTTPTests.m */; };
+		76BD606B21248C0F00F8A795 /* SCTracksJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BD606A21248C0F00F8A795 /* SCTracksJSONParser.m */; };
+		76BD60712124926D00F8A795 /* ProfileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BD60702124926D00F8A795 /* ProfileTests.m */; };
+		76BD60732124927D00F8A795 /* TrackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BD60722124927D00F8A795 /* TrackTests.m */; };
+		76BD60752124928B00F8A795 /* UserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BD60742124928B00F8A795 /* UserTests.m */; };
+		76BD607B212492F000F8A795 /* TracksJSONParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BD607A212492F000F8A795 /* TracksJSONParserTests.m */; };
+		76BD607D2124932800F8A795 /* SCUserJSONParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BD607C2124932800F8A795 /* SCUserJSONParserTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +68,7 @@
 		761507BE21206FA30016E397 /* SoundCloudProfileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoundCloudProfileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		761507C221206FA30016E397 /* SoundCloudProfileUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoundCloudProfileUITests.m; sourceTree = "<group>"; };
 		761507C421206FA30016E397 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		761507D7212070460016E397 /* SCSongsListProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCSongsListProtocols.h; sourceTree = "<group>"; };
+		761507D7212070460016E397 /* SCTracksListProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCTracksListProtocols.h; sourceTree = "<group>"; };
 		761507D8212070590016E397 /* SCProfileInfoProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCProfileInfoProtocols.h; sourceTree = "<group>"; };
 		761507D9212070780016E397 /* SCHTTPService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCHTTPService.h; sourceTree = "<group>"; };
 		761507DB212070AE0016E397 /* SCProfileService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCProfileService.h; sourceTree = "<group>"; };
@@ -74,7 +84,7 @@
 		761507E9212071F40016E397 /* SCServices.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCServices.m; sourceTree = "<group>"; };
 		761507ED212072350016E397 /* SCTracksParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCTracksParser.h; sourceTree = "<group>"; };
 		761507EE212072460016E397 /* SCProfileParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCProfileParser.h; sourceTree = "<group>"; };
-		761507F22120731A0016E397 /* UserInfoProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfoProtocols.h; sourceTree = "<group>"; };
+		761507F22120731A0016E397 /* SCUserInfoProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCUserInfoProtocols.h; sourceTree = "<group>"; };
 		761507F4212074770016E397 /* SCUserService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCUserService.h; sourceTree = "<group>"; };
 		761507F52120748E0016E397 /* SCRemoteUserService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCRemoteUserService.h; sourceTree = "<group>"; };
 		761507F62120748E0016E397 /* SCRemoteUserService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCRemoteUserService.m; sourceTree = "<group>"; };
@@ -91,6 +101,19 @@
 		7615080B2120764C0016E397 /* SCUserServiceObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCUserServiceObserver.h; sourceTree = "<group>"; };
 		7615080C2120765C0016E397 /* SCTracksServiceObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCTracksServiceObserver.h; sourceTree = "<group>"; };
 		7615080D212076800016E397 /* SCProfileServiceObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCProfileServiceObserver.h; sourceTree = "<group>"; };
+		76729CF1212164C100F720BA /* NSDictionary+HTTP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+HTTP.h"; sourceTree = "<group>"; };
+		76729CF2212164C100F720BA /* NSDictionary+HTTP.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+HTTP.m"; sourceTree = "<group>"; };
+		76729CF4212168A300F720BA /* NSString+HTTP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+HTTP.h"; sourceTree = "<group>"; };
+		76729CF5212168A300F720BA /* NSString+HTTP.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTTP.m"; sourceTree = "<group>"; };
+		76729CF92121694100F720BA /* NSDictionaryHTTPTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSDictionaryHTTPTests.m; sourceTree = "<group>"; };
+		76729CFB2121695800F720BA /* NSStringHTTPTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSStringHTTPTests.m; sourceTree = "<group>"; };
+		76BD606921248C0F00F8A795 /* SCTracksJSONParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCTracksJSONParser.h; sourceTree = "<group>"; };
+		76BD606A21248C0F00F8A795 /* SCTracksJSONParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCTracksJSONParser.m; sourceTree = "<group>"; };
+		76BD60702124926D00F8A795 /* ProfileTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileTests.m; sourceTree = "<group>"; };
+		76BD60722124927D00F8A795 /* TrackTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrackTests.m; sourceTree = "<group>"; };
+		76BD60742124928B00F8A795 /* UserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserTests.m; sourceTree = "<group>"; };
+		76BD607A212492F000F8A795 /* TracksJSONParserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TracksJSONParserTests.m; sourceTree = "<group>"; };
+		76BD607C2124932800F8A795 /* SCUserJSONParserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCUserJSONParserTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +164,7 @@
 		7615079D21206FA10016E397 /* SoundCloudProfile */ = {
 			isa = PBXGroup;
 			children = (
+				76729CEF2121649C00F720BA /* Common */,
 				761507DA212070880016E397 /* Entities */,
 				761507D121206FB80016E397 /* Serivces */,
 				761507D021206FB10016E397 /* Modules */,
@@ -158,6 +182,10 @@
 		761507B621206FA30016E397 /* SoundCloudProfileTests */ = {
 			isa = PBXGroup;
 			children = (
+				76BD606C2124922400F8A795 /* Entities */,
+				76729CF72121690C00F720BA /* Common */,
+				7615081021207C6B0016E397 /* Modules */,
+				7615080F21207C650016E397 /* Services */,
 				761507B721206FA30016E397 /* SoundCloudProfileTests.m */,
 				761507B921206FA30016E397 /* Info.plist */,
 			);
@@ -177,7 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				761507F1212072FC0016E397 /* UserInfo */,
-				761507D321206FCC0016E397 /* SongsList */,
+				761507D321206FCC0016E397 /* TracksList */,
 				761507D221206FC30016E397 /* ProfileInfo */,
 			);
 			path = Modules;
@@ -205,12 +233,12 @@
 			path = ProfileInfo;
 			sourceTree = "<group>";
 		};
-		761507D321206FCC0016E397 /* SongsList */ = {
+		761507D321206FCC0016E397 /* TracksList */ = {
 			isa = PBXGroup;
 			children = (
-				761507D7212070460016E397 /* SCSongsListProtocols.h */,
+				761507D7212070460016E397 /* SCTracksListProtocols.h */,
 			);
-			path = SongsList;
+			path = TracksList;
 			sourceTree = "<group>";
 		};
 		761507D421206FDA0016E397 /* HTTPService */ = {
@@ -271,6 +299,8 @@
 			isa = PBXGroup;
 			children = (
 				761507ED212072350016E397 /* SCTracksParser.h */,
+				76BD606921248C0F00F8A795 /* SCTracksJSONParser.h */,
+				76BD606A21248C0F00F8A795 /* SCTracksJSONParser.m */,
 			);
 			path = Parser;
 			sourceTree = "<group>";
@@ -296,7 +326,7 @@
 		761507F1212072FC0016E397 /* UserInfo */ = {
 			isa = PBXGroup;
 			children = (
-				761507F22120731A0016E397 /* UserInfoProtocols.h */,
+				761507F22120731A0016E397 /* SCUserInfoProtocols.h */,
 			);
 			path = UserInfo;
 			sourceTree = "<group>";
@@ -345,6 +375,124 @@
 				761508062120758E0016E397 /* GetUserOperation.m */,
 			);
 			path = Operations;
+			sourceTree = "<group>";
+		};
+		7615080F21207C650016E397 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				76BD6077212492A800F8A795 /* TracksService */,
+				76BD60762124929F00F8A795 /* UserService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		7615081021207C6B0016E397 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		76729CEF2121649C00F720BA /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				76729CF0212164A300F720BA /* Categories */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		76729CF0212164A300F720BA /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				76729CF1212164C100F720BA /* NSDictionary+HTTP.h */,
+				76729CF2212164C100F720BA /* NSDictionary+HTTP.m */,
+				76729CF4212168A300F720BA /* NSString+HTTP.h */,
+				76729CF5212168A300F720BA /* NSString+HTTP.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		76729CF72121690C00F720BA /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				76729CF82121691900F720BA /* Categories */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		76729CF82121691900F720BA /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				76729CF92121694100F720BA /* NSDictionaryHTTPTests.m */,
+				76729CFB2121695800F720BA /* NSStringHTTPTests.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		76BD606C2124922400F8A795 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				76BD606F2124924B00F8A795 /* User */,
+				76BD606E2124924600F8A795 /* Track */,
+				76BD606D2124923E00F8A795 /* Profile */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		76BD606D2124923E00F8A795 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				76BD60702124926D00F8A795 /* ProfileTests.m */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		76BD606E2124924600F8A795 /* Track */ = {
+			isa = PBXGroup;
+			children = (
+				76BD60722124927D00F8A795 /* TrackTests.m */,
+			);
+			path = Track;
+			sourceTree = "<group>";
+		};
+		76BD606F2124924B00F8A795 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				76BD60742124928B00F8A795 /* UserTests.m */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		76BD60762124929F00F8A795 /* UserService */ = {
+			isa = PBXGroup;
+			children = (
+				76BD6079212492C500F8A795 /* Parser */,
+			);
+			path = UserService;
+			sourceTree = "<group>";
+		};
+		76BD6077212492A800F8A795 /* TracksService */ = {
+			isa = PBXGroup;
+			children = (
+				76BD6078212492BE00F8A795 /* Parser */,
+			);
+			path = TracksService;
+			sourceTree = "<group>";
+		};
+		76BD6078212492BE00F8A795 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				76BD607A212492F000F8A795 /* TracksJSONParserTests.m */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		76BD6079212492C500F8A795 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				76BD607C2124932800F8A795 /* SCUserJSONParserTests.m */,
+			);
+			path = Parser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -484,9 +632,12 @@
 				761507DF212071330016E397 /* SCRemoteTracksService.m in Sources */,
 				761508012120753D0016E397 /* SCUser.m in Sources */,
 				7615080A212075B50016E397 /* GetFavoritTracksOperation.m in Sources */,
+				76729CF6212168A300F720BA /* NSString+HTTP.m in Sources */,
 				761507FE212075250016E397 /* SCTrack.m in Sources */,
 				761507EA212071F40016E397 /* SCServices.m in Sources */,
+				76BD606B21248C0F00F8A795 /* SCTracksJSONParser.m in Sources */,
 				761507FB212075090016E397 /* SCProfile.m in Sources */,
+				76729CF3212164C100F720BA /* NSDictionary+HTTP.m in Sources */,
 				761507E52120715E0016E397 /* SCRemoteHTTPService.m in Sources */,
 				761507E2212071470016E397 /* SCRemoteProfileService.m in Sources */,
 			);
@@ -496,6 +647,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76BD60732124927D00F8A795 /* TrackTests.m in Sources */,
+				76BD607D2124932800F8A795 /* SCUserJSONParserTests.m in Sources */,
+				76729CFC2121695800F720BA /* NSStringHTTPTests.m in Sources */,
+				76BD607B212492F000F8A795 /* TracksJSONParserTests.m in Sources */,
+				76BD60752124928B00F8A795 /* UserTests.m in Sources */,
+				76BD60712124926D00F8A795 /* ProfileTests.m in Sources */,
+				76729CFA2121694100F720BA /* NSDictionaryHTTPTests.m in Sources */,
 				761507B821206FA30016E397 /* SoundCloudProfileTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

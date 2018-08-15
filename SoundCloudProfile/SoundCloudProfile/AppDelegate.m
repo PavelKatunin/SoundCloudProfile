@@ -1,12 +1,6 @@
-//
-//  AppDelegate.m
-//  SoundCloudProfile
-//
-//  Created by Pavel Katunin on 8/12/18.
-//  Copyright © 2018 PavelKatunin. All rights reserved.
-//
-
 #import "AppDelegate.h"
+
+static NSString *const kProfileId = @"actuallygrimes";
 
 @interface AppDelegate ()
 

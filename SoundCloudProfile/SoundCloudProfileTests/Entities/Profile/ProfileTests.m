@@ -1,10 +1,18 @@
+//
+//  ProfileTests.m
+//  SoundCloudProfileTests
+//
+//  Created by Pavel Katunin on 8/15/18.
+//  Copyright © 2018 PavelKatunin. All rights reserved.
+//
+
 #import <XCTest/XCTest.h>
 
-@interface SoundCloudProfileTests : XCTestCase
+@interface ProfileTests : XCTestCase
 
 @end
 
-@implementation SoundCloudProfileTests
+@implementation ProfileTests
 
 - (void)setUp {
     [super setUp];

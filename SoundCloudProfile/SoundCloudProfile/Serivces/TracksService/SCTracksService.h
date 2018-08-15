@@ -1,5 +1,9 @@
 #import <Foundation/Foundation.h>
 
-@protocol SCSongsService <NSObject>
+@protocol SCTracksService <NSObject>
+
+- (void)getFavoritTracksForUser:(NSString *)userId
+                        success:()
+                           fail:()
 
 @end

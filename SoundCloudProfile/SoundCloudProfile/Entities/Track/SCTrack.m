@@ -2,4 +2,6 @@
 
 @implementation SCTrack
 
+#pragma mark - Initialization
+
 @end

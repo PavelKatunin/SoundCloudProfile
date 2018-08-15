@@ -34,6 +34,7 @@
 		76BD60752124928B00F8A795 /* UserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BD60742124928B00F8A795 /* UserTests.m */; };
 		76BD607B212492F000F8A795 /* TracksJSONParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BD607A212492F000F8A795 /* TracksJSONParserTests.m */; };
 		76BD607D2124932800F8A795 /* SCUserJSONParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BD607C2124932800F8A795 /* SCUserJSONParserTests.m */; };
+		76BD60822124A81A00F8A795 /* SCUserJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BD60812124A81A00F8A795 /* SCUserJSONParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,7 +84,6 @@
 		761507E8212071F40016E397 /* SCServices.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCServices.h; sourceTree = "<group>"; };
 		761507E9212071F40016E397 /* SCServices.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCServices.m; sourceTree = "<group>"; };
 		761507ED212072350016E397 /* SCTracksParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCTracksParser.h; sourceTree = "<group>"; };
-		761507EE212072460016E397 /* SCProfileParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCProfileParser.h; sourceTree = "<group>"; };
 		761507F22120731A0016E397 /* SCUserInfoProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCUserInfoProtocols.h; sourceTree = "<group>"; };
 		761507F4212074770016E397 /* SCUserService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCUserService.h; sourceTree = "<group>"; };
 		761507F52120748E0016E397 /* SCRemoteUserService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCRemoteUserService.h; sourceTree = "<group>"; };
@@ -114,6 +114,9 @@
 		76BD60742124928B00F8A795 /* UserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserTests.m; sourceTree = "<group>"; };
 		76BD607A212492F000F8A795 /* TracksJSONParserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TracksJSONParserTests.m; sourceTree = "<group>"; };
 		76BD607C2124932800F8A795 /* SCUserJSONParserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCUserJSONParserTests.m; sourceTree = "<group>"; };
+		76BD607F2124A80600F8A795 /* SCUserParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCUserParser.h; sourceTree = "<group>"; };
+		76BD60802124A81A00F8A795 /* SCUserJSONParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCUserJSONParser.h; sourceTree = "<group>"; };
+		76BD60812124A81A00F8A795 /* SCUserJSONParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCUserJSONParser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,7 +258,6 @@
 			isa = PBXGroup;
 			children = (
 				761508022120755A0016E397 /* Operations */,
-				761507EB2120720C0016E397 /* Parser */,
 				761507DB212070AE0016E397 /* SCProfileService.h */,
 				761507E0212071470016E397 /* SCRemoteProfileService.h */,
 				761507E1212071470016E397 /* SCRemoteProfileService.m */,
@@ -285,14 +287,6 @@
 				761507EF212072560016E397 /* User */,
 			);
 			path = Entities;
-			sourceTree = "<group>";
-		};
-		761507EB2120720C0016E397 /* Parser */ = {
-			isa = PBXGroup;
-			children = (
-				761507EE212072460016E397 /* SCProfileParser.h */,
-			);
-			path = Parser;
 			sourceTree = "<group>";
 		};
 		761507EC212072110016E397 /* Parser */ = {
@@ -334,6 +328,7 @@
 		761507F3212073870016E397 /* UserService */ = {
 			isa = PBXGroup;
 			children = (
+				76BD607E2124A7E700F8A795 /* Parser */,
 				76150804212075660016E397 /* Operations */,
 				761507F4212074770016E397 /* SCUserService.h */,
 				761507F52120748E0016E397 /* SCRemoteUserService.h */,
@@ -495,6 +490,16 @@
 			path = Parser;
 			sourceTree = "<group>";
 		};
+		76BD607E2124A7E700F8A795 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				76BD607F2124A80600F8A795 /* SCUserParser.h */,
+				76BD60802124A81A00F8A795 /* SCUserJSONParser.h */,
+				76BD60812124A81A00F8A795 /* SCUserJSONParser.m */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -634,6 +639,7 @@
 				7615080A212075B50016E397 /* GetFavoritTracksOperation.m in Sources */,
 				76729CF6212168A300F720BA /* NSString+HTTP.m in Sources */,
 				761507FE212075250016E397 /* SCTrack.m in Sources */,
+				76BD60822124A81A00F8A795 /* SCUserJSONParser.m in Sources */,
 				761507EA212071F40016E397 /* SCServices.m in Sources */,
 				76BD606B21248C0F00F8A795 /* SCTracksJSONParser.m in Sources */,
 				761507FB212075090016E397 /* SCProfile.m in Sources */,

@@ -2,8 +2,11 @@
 
 @interface SCProfile ()
 
-@property (nonatomic, copy, nonnull) SCUser *user;
-@property (nonatomic, copy, nullable) NSArray *tracks;
+//required
+@property (nonatomic, strong, nonnull) SCUser *user;
+
+//optional
+@property (nonatomic, strong, nullable) NSArray *tracks;
 
 @end
 

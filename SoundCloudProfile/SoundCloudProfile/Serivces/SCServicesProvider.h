@@ -1,9 +1,14 @@
 #import <Foundation/Foundation.h>
+#import "SCUserService.h"
+#import "SCTracksService.h"
+#import "SCProfileService.h"
+#import "SCHTTPService.h"
 
 @protocol SCServicesProvider <NSObject>
 
-@property (atomic, readonly) id <SCUserService> userService;
-@property (atomic, readonly) id <SCTracksService> tracksService;
-@property (atomic, readonly) id <SCProfileService> profileService;
+@property (nonatomic, readonly) id <SCHTTPService> httpService;
+@property (nonatomic, readonly) id <SCUserService> userService;
+@property (nonatomic, readonly) id <SCTracksService> tracksService;
+@property (nonatomic, readonly) id <SCProfileService> profileService;
 
 @end

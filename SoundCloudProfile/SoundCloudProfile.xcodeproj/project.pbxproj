@@ -24,6 +24,12 @@
 		761508012120753D0016E397 /* SCUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 761508002120753D0016E397 /* SCUser.m */; };
 		761508072120758E0016E397 /* GetUserOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 761508062120758E0016E397 /* GetUserOperation.m */; };
 		7615080A212075B50016E397 /* GetFavoritTracksOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 76150809212075B50016E397 /* GetFavoritTracksOperation.m */; };
+		761713882125608200CBD992 /* SCProdEnvironmentService.m in Sources */ = {isa = PBXBuildFile; fileRef = 761713872125608200CBD992 /* SCProdEnvironmentService.m */; };
+		7617138B2125610E00CBD992 /* SCProdAuthenticationService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7617138A2125610E00CBD992 /* SCProdAuthenticationService.m */; };
+		7617138D2125634000CBD992 /* User.json in Resources */ = {isa = PBXBuildFile; fileRef = 7617138C2125634000CBD992 /* User.json */; };
+		7617138F2125638E00CBD992 /* Track.json in Resources */ = {isa = PBXBuildFile; fileRef = 7617138E2125638E00CBD992 /* Track.json */; };
+		761713912125954D00CBD992 /* CorruptedData.json in Resources */ = {isa = PBXBuildFile; fileRef = 761713902125954D00CBD992 /* CorruptedData.json */; };
+		761713932125956E00CBD992 /* CorruptedUser.json in Resources */ = {isa = PBXBuildFile; fileRef = 761713922125956E00CBD992 /* CorruptedUser.json */; };
 		76729CF3212164C100F720BA /* NSDictionary+HTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 76729CF2212164C100F720BA /* NSDictionary+HTTP.m */; };
 		76729CF6212168A300F720BA /* NSString+HTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 76729CF5212168A300F720BA /* NSString+HTTP.m */; };
 		76729CFA2121694100F720BA /* NSDictionaryHTTPTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 76729CF92121694100F720BA /* NSDictionaryHTTPTests.m */; };
@@ -101,6 +107,16 @@
 		7615080B2120764C0016E397 /* SCUserServiceObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCUserServiceObserver.h; sourceTree = "<group>"; };
 		7615080C2120765C0016E397 /* SCTracksServiceObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCTracksServiceObserver.h; sourceTree = "<group>"; };
 		7615080D212076800016E397 /* SCProfileServiceObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCProfileServiceObserver.h; sourceTree = "<group>"; };
+		7617138321255FCE00CBD992 /* SCEnvironmentService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCEnvironmentService.h; sourceTree = "<group>"; };
+		761713852125601100CBD992 /* SCAuthenticationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCAuthenticationService.h; sourceTree = "<group>"; };
+		761713862125608200CBD992 /* SCProdEnvironmentService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCProdEnvironmentService.h; sourceTree = "<group>"; };
+		761713872125608200CBD992 /* SCProdEnvironmentService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCProdEnvironmentService.m; sourceTree = "<group>"; };
+		761713892125610E00CBD992 /* SCProdAuthenticationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCProdAuthenticationService.h; sourceTree = "<group>"; };
+		7617138A2125610E00CBD992 /* SCProdAuthenticationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCProdAuthenticationService.m; sourceTree = "<group>"; };
+		7617138C2125634000CBD992 /* User.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = User.json; sourceTree = "<group>"; };
+		7617138E2125638E00CBD992 /* Track.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Track.json; sourceTree = "<group>"; };
+		761713902125954D00CBD992 /* CorruptedData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CorruptedData.json; sourceTree = "<group>"; };
+		761713922125956E00CBD992 /* CorruptedUser.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CorruptedUser.json; sourceTree = "<group>"; };
 		76729CF1212164C100F720BA /* NSDictionary+HTTP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+HTTP.h"; sourceTree = "<group>"; };
 		76729CF2212164C100F720BA /* NSDictionary+HTTP.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+HTTP.m"; sourceTree = "<group>"; };
 		76729CF4212168A300F720BA /* NSString+HTTP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+HTTP.h"; sourceTree = "<group>"; };
@@ -185,6 +201,7 @@
 		761507B621206FA30016E397 /* SoundCloudProfileTests */ = {
 			isa = PBXGroup;
 			children = (
+				761713942125960200CBD992 /* TestHelpers */,
 				76BD606C2124922400F8A795 /* Entities */,
 				76729CF72121690C00F720BA /* Common */,
 				7615081021207C6B0016E397 /* Modules */,
@@ -217,6 +234,8 @@
 		761507D121206FB80016E397 /* Serivces */ = {
 			isa = PBXGroup;
 			children = (
+				7617138421255FF100CBD992 /* AuthenticationService */,
+				7617138221255FA300CBD992 /* EnvironmentService */,
 				761507F3212073870016E397 /* UserService */,
 				761507D6212070060016E397 /* TracksService */,
 				761507D521206FE20016E397 /* ProfileService */,
@@ -388,6 +407,33 @@
 			path = Modules;
 			sourceTree = "<group>";
 		};
+		7617138221255FA300CBD992 /* EnvironmentService */ = {
+			isa = PBXGroup;
+			children = (
+				7617138321255FCE00CBD992 /* SCEnvironmentService.h */,
+				761713862125608200CBD992 /* SCProdEnvironmentService.h */,
+				761713872125608200CBD992 /* SCProdEnvironmentService.m */,
+			);
+			path = EnvironmentService;
+			sourceTree = "<group>";
+		};
+		7617138421255FF100CBD992 /* AuthenticationService */ = {
+			isa = PBXGroup;
+			children = (
+				761713852125601100CBD992 /* SCAuthenticationService.h */,
+				761713892125610E00CBD992 /* SCProdAuthenticationService.h */,
+				7617138A2125610E00CBD992 /* SCProdAuthenticationService.m */,
+			);
+			path = AuthenticationService;
+			sourceTree = "<group>";
+		};
+		761713942125960200CBD992 /* TestHelpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TestHelpers;
+			sourceTree = "<group>";
+		};
 		76729CEF2121649C00F720BA /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -478,6 +524,7 @@
 			isa = PBXGroup;
 			children = (
 				76BD607A212492F000F8A795 /* TracksJSONParserTests.m */,
+				7617138E2125638E00CBD992 /* Track.json */,
 			);
 			path = Parser;
 			sourceTree = "<group>";
@@ -486,6 +533,9 @@
 			isa = PBXGroup;
 			children = (
 				76BD607C2124932800F8A795 /* SCUserJSONParserTests.m */,
+				7617138C2125634000CBD992 /* User.json */,
+				761713902125954D00CBD992 /* CorruptedData.json */,
+				761713922125956E00CBD992 /* CorruptedUser.json */,
 			);
 			path = Parser;
 			sourceTree = "<group>";
@@ -613,6 +663,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7617138D2125634000CBD992 /* User.json in Resources */,
+				761713932125956E00CBD992 /* CorruptedUser.json in Resources */,
+				7617138F2125638E00CBD992 /* Track.json in Resources */,
+				761713912125954D00CBD992 /* CorruptedData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -630,11 +684,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7617138B2125610E00CBD992 /* SCProdAuthenticationService.m in Sources */,
 				761507F72120748E0016E397 /* SCRemoteUserService.m in Sources */,
 				761507AE21206FA20016E397 /* main.m in Sources */,
 				761507A021206FA10016E397 /* AppDelegate.m in Sources */,
 				761508072120758E0016E397 /* GetUserOperation.m in Sources */,
 				761507DF212071330016E397 /* SCRemoteTracksService.m in Sources */,
+				761713882125608200CBD992 /* SCProdEnvironmentService.m in Sources */,
 				761508012120753D0016E397 /* SCUser.m in Sources */,
 				7615080A212075B50016E397 /* GetFavoritTracksOperation.m in Sources */,
 				76729CF6212168A300F720BA /* NSString+HTTP.m in Sources */,

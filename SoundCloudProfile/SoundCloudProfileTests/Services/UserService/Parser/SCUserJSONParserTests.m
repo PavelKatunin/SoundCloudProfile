@@ -1,12 +1,5 @@
-//
-//  SCUserJSONParserTests.m
-//  SoundCloudProfileTests
-//
-//  Created by Pavel Katunin on 8/15/18.
-//  Copyright © 2018 PavelKatunin. All rights reserved.
-//
-
 #import <XCTest/XCTest.h>
+#import "SCUserJSONParser.h"
 
 @interface SCUserJSONParserTests : XCTestCase
 
@@ -14,26 +7,37 @@
 
 @implementation SCUserJSONParserTests
 
-- (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+- (NSData *)userJSONData {
+    NSString *trackPath = [[NSBundle bundleForClass:[self class]] pathForResource:@"User" ofType:@"json"];
+    return [NSData dataWithContentsOfFile:trackPath];
 }
 
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
+- (void)testParseCorrectUser {
+    SCUserJSONParser *parser = [[SCUserJSONParser alloc] init];
+    NSError *error = nil;
+    SCUser *user = [parser userFromData:[self userJSONData]
+                                  error:&error];
+    
+    XCTAssertNil(error);
+    XCTAssertNotNil(user);
+    XCTAssertEqualObjects(user.identifier, @(3207));
+    XCTAssertEqualObjects(user.userName, @"Johannes Wagener");
+    XCTAssertEqualObjects(user.avatarUrl.absoluteString,
+                          @"http://i1.sndcdn.com/avatars-000001552142-pbw8yd-large.jpg?142a848");
+    XCTAssertEqualObjects(user.fullName, @"Johannes Wagener");
+    XCTAssertEqualObjects(user.userDescription,
+                          @"<b>Hacker at SoundCloud</b>\r\n\r\nSome of my recent Hacks:\r\n\r\nsoundiverse.com"\
+                          " \r\nbrowse recordings with the FiRe app by artwork\r\n\r\ntopbillin.com \r\nfind"\
+                          " people to follow on SoundCloud\r\n\r\nchatter.fm \r\nget your account hooked up"\
+                          " with a voicebox\r\n\r\nrecbutton.com \r\nrecord straight to your soundcloud account");
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+- (void)testParseUserWithoutRequiredFields {
+    //TODO: Implement
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+- (void)testParseCorruptedJson {
+    //TODO: Implement
 }
 
 @end

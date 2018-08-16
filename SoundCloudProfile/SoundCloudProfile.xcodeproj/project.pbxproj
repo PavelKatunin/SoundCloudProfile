@@ -30,6 +30,9 @@
 		7617138F2125638E00CBD992 /* Track.json in Resources */ = {isa = PBXBuildFile; fileRef = 7617138E2125638E00CBD992 /* Track.json */; };
 		761713912125954D00CBD992 /* CorruptedData.json in Resources */ = {isa = PBXBuildFile; fileRef = 761713902125954D00CBD992 /* CorruptedData.json */; };
 		761713932125956E00CBD992 /* CorruptedUser.json in Resources */ = {isa = PBXBuildFile; fileRef = 761713922125956E00CBD992 /* CorruptedUser.json */; };
+		761713972125DE4E00CBD992 /* SCUserInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 761713962125DE4E00CBD992 /* SCUserInfoView.m */; };
+		7617139C2125E00D00CBD992 /* SCProfileInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7617139B2125E00D00CBD992 /* SCProfileInfoViewController.m */; };
+		7617139F2125E03900CBD992 /* SCProfileInfoPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7617139E2125E03900CBD992 /* SCProfileInfoPresenter.m */; };
 		76729CF3212164C100F720BA /* NSDictionary+HTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 76729CF2212164C100F720BA /* NSDictionary+HTTP.m */; };
 		76729CF6212168A300F720BA /* NSString+HTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 76729CF5212168A300F720BA /* NSString+HTTP.m */; };
 		76729CFA2121694100F720BA /* NSDictionaryHTTPTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 76729CF92121694100F720BA /* NSDictionaryHTTPTests.m */; };
@@ -90,7 +93,6 @@
 		761507E8212071F40016E397 /* SCServices.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCServices.h; sourceTree = "<group>"; };
 		761507E9212071F40016E397 /* SCServices.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCServices.m; sourceTree = "<group>"; };
 		761507ED212072350016E397 /* SCTracksParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCTracksParser.h; sourceTree = "<group>"; };
-		761507F22120731A0016E397 /* SCUserInfoProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCUserInfoProtocols.h; sourceTree = "<group>"; };
 		761507F4212074770016E397 /* SCUserService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCUserService.h; sourceTree = "<group>"; };
 		761507F52120748E0016E397 /* SCRemoteUserService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCRemoteUserService.h; sourceTree = "<group>"; };
 		761507F62120748E0016E397 /* SCRemoteUserService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCRemoteUserService.m; sourceTree = "<group>"; };
@@ -117,6 +119,12 @@
 		7617138E2125638E00CBD992 /* Track.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Track.json; sourceTree = "<group>"; };
 		761713902125954D00CBD992 /* CorruptedData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CorruptedData.json; sourceTree = "<group>"; };
 		761713922125956E00CBD992 /* CorruptedUser.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CorruptedUser.json; sourceTree = "<group>"; };
+		761713952125DE4E00CBD992 /* SCUserInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCUserInfoView.h; sourceTree = "<group>"; };
+		761713962125DE4E00CBD992 /* SCUserInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCUserInfoView.m; sourceTree = "<group>"; };
+		7617139A2125E00D00CBD992 /* SCProfileInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCProfileInfoViewController.h; sourceTree = "<group>"; };
+		7617139B2125E00D00CBD992 /* SCProfileInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCProfileInfoViewController.m; sourceTree = "<group>"; };
+		7617139D2125E03900CBD992 /* SCProfileInfoPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCProfileInfoPresenter.h; sourceTree = "<group>"; };
+		7617139E2125E03900CBD992 /* SCProfileInfoPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCProfileInfoPresenter.m; sourceTree = "<group>"; };
 		76729CF1212164C100F720BA /* NSDictionary+HTTP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+HTTP.h"; sourceTree = "<group>"; };
 		76729CF2212164C100F720BA /* NSDictionary+HTTP.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+HTTP.m"; sourceTree = "<group>"; };
 		76729CF4212168A300F720BA /* NSString+HTTP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+HTTP.h"; sourceTree = "<group>"; };
@@ -251,6 +259,10 @@
 			isa = PBXGroup;
 			children = (
 				761507D8212070590016E397 /* SCProfileInfoProtocols.h */,
+				7617139A2125E00D00CBD992 /* SCProfileInfoViewController.h */,
+				7617139B2125E00D00CBD992 /* SCProfileInfoViewController.m */,
+				7617139D2125E03900CBD992 /* SCProfileInfoPresenter.h */,
+				7617139E2125E03900CBD992 /* SCProfileInfoPresenter.m */,
 			);
 			path = ProfileInfo;
 			sourceTree = "<group>";
@@ -339,7 +351,7 @@
 		761507F1212072FC0016E397 /* UserInfo */ = {
 			isa = PBXGroup;
 			children = (
-				761507F22120731A0016E397 /* SCUserInfoProtocols.h */,
+				761713982125DE5E00CBD992 /* Views */,
 			);
 			path = UserInfo;
 			sourceTree = "<group>";
@@ -432,6 +444,15 @@
 			children = (
 			);
 			path = TestHelpers;
+			sourceTree = "<group>";
+		};
+		761713982125DE5E00CBD992 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				761713952125DE4E00CBD992 /* SCUserInfoView.h */,
+				761713962125DE4E00CBD992 /* SCUserInfoView.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		76729CEF2121649C00F720BA /* Common */ = {
@@ -685,10 +706,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7617138B2125610E00CBD992 /* SCProdAuthenticationService.m in Sources */,
+				761713972125DE4E00CBD992 /* SCUserInfoView.m in Sources */,
 				761507F72120748E0016E397 /* SCRemoteUserService.m in Sources */,
 				761507AE21206FA20016E397 /* main.m in Sources */,
 				761507A021206FA10016E397 /* AppDelegate.m in Sources */,
 				761508072120758E0016E397 /* GetUserOperation.m in Sources */,
+				7617139C2125E00D00CBD992 /* SCProfileInfoViewController.m in Sources */,
 				761507DF212071330016E397 /* SCRemoteTracksService.m in Sources */,
 				761713882125608200CBD992 /* SCProdEnvironmentService.m in Sources */,
 				761508012120753D0016E397 /* SCUser.m in Sources */,
@@ -696,6 +719,7 @@
 				76729CF6212168A300F720BA /* NSString+HTTP.m in Sources */,
 				761507FE212075250016E397 /* SCTrack.m in Sources */,
 				76BD60822124A81A00F8A795 /* SCUserJSONParser.m in Sources */,
+				7617139F2125E03900CBD992 /* SCProfileInfoPresenter.m in Sources */,
 				761507EA212071F40016E397 /* SCServices.m in Sources */,
 				76BD606B21248C0F00F8A795 /* SCTracksJSONParser.m in Sources */,
 				761507FB212075090016E397 /* SCProfile.m in Sources */,

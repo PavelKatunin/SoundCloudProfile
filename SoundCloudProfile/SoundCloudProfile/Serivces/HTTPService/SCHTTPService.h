@@ -1,7 +1,8 @@
 #import <Foundation/Foundation.h>
 
-typedef void (SCHTTPSuccess)(NSData *);
-typedef void (SCHTTPFail)(NSError *);
+
+typedef void (^SCHTTPSuccess)(NSData *data);
+typedef void (^SCHTTPFail)(NSError *error);
 
 @protocol SCHTTPService <NSObject>
 

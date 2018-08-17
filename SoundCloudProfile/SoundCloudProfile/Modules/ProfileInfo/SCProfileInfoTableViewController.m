@@ -91,11 +91,11 @@ static NSString *const kTrackCellId = @"TrackCell";
     NSString *locationString = @"";
     
     if (user.city != nil) {
-        [locationString stringByAppendingString:[NSString stringWithFormat:@"%@, ", user.city]];
+        locationString = [locationString stringByAppendingString:[NSString stringWithFormat:@"%@, ", user.city]];
     }
     
     if (user.country != nil) {
-        [locationString stringByAppendingString:user.country];
+        locationString = [locationString stringByAppendingString:user.country];
     }
     
     self.userInfoView.locationLabel.text = locationString;

@@ -9,6 +9,7 @@ static NSString *const kTrackCellId = @"TrackCell";
 
 @property (nonatomic, strong) SCUserInfoView *userInfoView;
 
+
 @end
 
 @implementation SCProfileInfoTableViewController
@@ -18,11 +19,12 @@ static NSString *const kTrackCellId = @"TrackCell";
 - (void)setProfile:(SCProfile *)profile {
     _profile = profile;
     [self updateUserInfoView];
+    [self.refreshControl endRefreshing];
     [self.tableView reloadData];
 }
 
 - (void)showError {
-    
+    [self.refreshControl endRefreshing];
 }
 
 #pragma mark - Table view data source
@@ -73,9 +75,17 @@ static NSString *const kTrackCellId = @"TrackCell";
     [super viewDidLoad];
     [self.tableView registerClass:[SCTrackTableViewCell class] forCellReuseIdentifier:kTrackCellId];
     [self.presenter didLoadView];
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self
+                            action:@selector(refreshControlDidChangeValue:)
+                  forControlEvents:UIControlEventValueChanged];
 }
 
 #pragma mark - Private
+
+- (void)refreshControlDidChangeValue:(id)sender {
+    [self.presenter didPullToRefresh];
+}
 
 //TODO: Move to presenter
 - (void)updateUserInfoView {

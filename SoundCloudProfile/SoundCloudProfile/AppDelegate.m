@@ -22,7 +22,7 @@ static NSString *const kProfileId = @"actuallygrimes";
         [[SCProfileInfoPresenter alloc] initWithUserProfileService:services.profileService
                                                        httpService:services.httpService];
     SCProfileInfoTableViewController *rootController =
-        [[SCProfileInfoTableViewController alloc] initWithNibName:nil bundle:nil];
+        [[SCProfileInfoTableViewController alloc] initWithStyle:UITableViewStylePlain];
     rootController.presenter = presenter;
     presenter.view = rootController;
     self.window.rootViewController = rootController;

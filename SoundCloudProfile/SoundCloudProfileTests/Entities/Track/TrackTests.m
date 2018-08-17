@@ -15,12 +15,14 @@
                                                    title:@"Scars"
                                                 duration:@(18000)
                                                  artwork:artwork
-                                                   genre:@"Rock"];
+                                                   genre:@"Rock"
+                                          durationString:@"10:10"];
     XCTAssertNotNil(track.identifier);
     XCTAssertNotNil(track.title);
     XCTAssertNotNil(track.duration);
     XCTAssertNotNil(track.artwork);
     XCTAssertNotNil(track.genre);
+    XCTAssertNotNil(track.durationString);
 }
 
 - (void)testRequiredTrackInitialization {
@@ -28,12 +30,14 @@
                                                    title:@"Scars"
                                                 duration:nil
                                                  artwork:nil
-                                                   genre:nil];
+                                                   genre:nil
+                                          durationString:nil];
     XCTAssertNotNil(track.identifier);
     XCTAssertNotNil(track.title);
     XCTAssertNil(track.duration);
     XCTAssertNil(track.artwork);
     XCTAssertNil(track.genre);
+    XCTAssertNil(track.durationString);
 }
 
 @end

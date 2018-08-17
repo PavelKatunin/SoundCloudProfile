@@ -54,7 +54,7 @@ static NSString *const kTrackCellId = @"TrackCell";
     SCTrackTableViewCell *trackCell = (SCTrackTableViewCell *)cell;
     SCTrack *track = self.profile.tracks[indexPath.row];
     trackCell.trackView.titleLabel.text = track.title;
-    trackCell.trackView.durationLabel.text = track.duration.description;
+    trackCell.trackView.durationLabel.text = track.durationString;
     trackCell.trackView.genreLabel.text = track.genre;
     return trackCell;
 }

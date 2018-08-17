@@ -8,6 +8,7 @@
 
 //optional
 @property (nonatomic, readonly, nullable) NSNumber *duration;
+@property (nonatomic, readonly, nullable) NSString *durationString;
 @property (nonatomic, readonly, nullable) NSURL *artwork;
 @property (nonatomic, readonly, nullable) NSString *genre;
 
@@ -15,6 +16,7 @@
                              title:(nonnull NSString *)title
                           duration:(nullable NSNumber *)duration
                            artwork:(nullable NSURL *)artwork
-                             genre:(nullable NSString *)genre;
+                             genre:(nullable NSString *)genre
+                    durationString:(nullable NSString *)durationString;
 
 @end

@@ -26,10 +26,12 @@
                                                    title:@"Scars"
                                                 duration:@(18000)
                                                  artwork:artwork
-                                                   genre:@"Rock"];
+                                                   genre:@"Rock"
+                                          durationString:@"10:10"];
     
     SCProfile *profile = [[SCProfile alloc] initWithUser:user
-                                                  tracks:@[track]];
+                                                  tracks:@[track]
+                                         avatarImageData:nil];
     
     XCTAssertNotNil(profile.user);
     XCTAssertNotNil(profile.tracks);
@@ -48,7 +50,8 @@
                                                  city:@"Saint-Petersburg"];
     
     SCProfile *profile = [[SCProfile alloc] initWithUser:user
-                                                  tracks:nil];
+                                                  tracks:nil
+                                         avatarImageData:nil];
     
     XCTAssertNotNil(profile.user);
     XCTAssertNil(profile.tracks);

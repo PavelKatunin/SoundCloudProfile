@@ -8,6 +8,7 @@
 
 //optional
 @property (nonatomic, copy, nullable) NSNumber *duration;
+@property (nonatomic, copy, nullable) NSString *durationString;
 @property (nonatomic, copy, nullable) NSURL *artwork;
 @property (nonatomic, copy, nullable) NSString *genre;
 
@@ -21,7 +22,8 @@
                              title:(nonnull NSString *)title
                           duration:(nullable NSNumber *)duration
                            artwork:(nullable NSURL *)artwork
-                             genre:(nullable NSString *)genre {
+                             genre:(nullable NSString *)genre
+                    durationString:(nullable NSString *)durationString {
     self = [super init];
     if (self != nil) {
         self.identifier = identifier;
@@ -29,6 +31,7 @@
         self.duration = duration;
         self.artwork = artwork;
         self.genre = genre;
+        self.durationString = durationString;
     }
     return self;
 }

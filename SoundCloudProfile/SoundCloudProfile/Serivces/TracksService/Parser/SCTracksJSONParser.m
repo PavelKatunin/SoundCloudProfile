@@ -76,6 +76,13 @@ static NSString *const kGenreKey = @"genre";
     return track;
 }
 
+- (NSString *)timeFormatted:(int)totalSeconds{
+    int seconds = totalSeconds % 60;
+    int minutes = (totalSeconds / 60) % 60;
+    
+    return [NSString stringWithFormat:@"%02d:%02d", minutes, seconds];
+}
+
 - (nullable SCTrack *)trackFromDictionary:(NSDictionary *)dictionary error:(NSError **)error {
     SCTrack *track = nil;
     NSNumber *identifier = dictionary[kIdentifierKey];
@@ -84,13 +91,15 @@ static NSString *const kGenreKey = @"genre";
     NSString *genre = dictionary[kGenreKey];
     NSString *artworkUrlString = dictionary[kArtworkKey];
     NSURL *artwork = [NSURL URLWithString:artworkUrlString];
+    NSString *durationString = [self timeFormatted:duration.intValue];
     
     if (identifier != nil && title != nil) {
         track = [[SCTrack alloc] initWithIdentifier:identifier
                                               title:title
                                            duration:duration
                                             artwork:artwork
-                                              genre:genre];
+                                              genre:genre
+                                     durationString:durationString];
     }
     else {
         *error = [NSError errorWithDomain:kTracksParserErrorDomain

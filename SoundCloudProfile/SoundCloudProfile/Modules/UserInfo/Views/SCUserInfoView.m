@@ -1,4 +1,5 @@
 #import "SCUserInfoView.h"
+#import <QuartzCore/QuartzCore.h>
 
 static const CGFloat kPadding = 8;
 
@@ -20,6 +21,10 @@ static SCUserInfoView *CommonInit(SCUserInfoView *self) {
         [self addSubview:backgroundView];
         self.backgroundView = backgroundView;
         
+        UIImageView *avatarView = [self createAvatarImageView];
+        [self addSubview:avatarView];
+        self.avatarImageView = avatarView;
+        
         UILabel *nameLabel = [self createNameLabel];
         [self addSubview:nameLabel];
         self.userNameLabel = nameLabel;
@@ -31,10 +36,6 @@ static SCUserInfoView *CommonInit(SCUserInfoView *self) {
         UILabel *locationLabel = [self createLocationLabel];
         [self addSubview:locationLabel];
         self.locationLabel = locationLabel;
-        
-        UIImageView *avatarView = [self createAvatarImageView];
-        [self addSubview:avatarView];
-        self.avatarImageView = avatarView;
         
         [self activateConstraints];
     }
@@ -56,6 +57,7 @@ static SCUserInfoView *CommonInit(SCUserInfoView *self) {
     label.translatesAutoresizingMaskIntoConstraints = false;
     label.textColor = [UIColor whiteColor];
     label.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.5];
+    label.font = [UIFont systemFontOfSize:20.f];
     return label;
 }
 
@@ -79,6 +81,8 @@ static SCUserInfoView *CommonInit(SCUserInfoView *self) {
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectZero];
     imageView.translatesAutoresizingMaskIntoConstraints = false;
     imageView.contentMode = UIViewContentModeScaleAspectFill;
+    imageView.layer.cornerRadius = 50.;
+    imageView.layer.masksToBounds = YES;
     return imageView;
 }
 

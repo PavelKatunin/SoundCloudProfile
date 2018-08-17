@@ -1,11 +1,3 @@
-//
-//  SCAsynchronousOperation.m
-//  SoundCloudProfile
-//
-//  Created by Pavel Katunin on 8/17/18.
-//  Copyright © 2018 PavelKatunin. All rights reserved.
-//
-
 #import "SCAsynchronousOperation.h"
 
 @interface SCAsynchronousOperation()

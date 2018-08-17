@@ -1,5 +1,7 @@
 #import "SCProfileInfoTableViewController.h"
 #import "SCUserInfoView.h"
+#import "SCTrackTableViewCell.h"
+#import "SCTrack.h"
 
 static NSString *const kTrackCellId = @"TrackCell";
 
@@ -19,6 +21,10 @@ static NSString *const kTrackCellId = @"TrackCell";
     [self.tableView reloadData];
 }
 
+- (void)showError {
+    
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -26,14 +32,15 @@ static NSString *const kTrackCellId = @"TrackCell";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    NSLog(@"%ld", self.profile.tracks.count);
+    return self.profile.tracks.count;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     if (self.userInfoView == nil) {
         SCUserInfoView *userInfoView = [[SCUserInfoView alloc] initWithFrame:CGRectZero];
         userInfoView.translatesAutoresizingMaskIntoConstraints = false;
-        [[userInfoView.heightAnchor constraintEqualToConstant:150] setActive:YES];
+        [[userInfoView.heightAnchor constraintEqualToConstant:170] setActive:YES];
         [[userInfoView.widthAnchor constraintEqualToConstant:self.view.frame.size.width] setActive:YES];
         self.userInfoView = userInfoView;
         [self updateUserInfoView];
@@ -43,21 +50,34 @@ static NSString *const kTrackCellId = @"TrackCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kTrackCellId forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
+    NSAssert([cell isKindOfClass:[SCTrackTableViewCell class]], @"Unsupported cell type");
+    SCTrackTableViewCell *trackCell = (SCTrackTableViewCell *)cell;
+    SCTrack *track = self.profile.tracks[indexPath.row];
+    trackCell.trackView.titleLabel.text = track.title;
+    trackCell.trackView.durationLabel.text = track.duration.description;
+    trackCell.trackView.genreLabel.text = track.genre;
+    return trackCell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 84.;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 #pragma mark - View life cycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.tableView registerClass:[SCTrackTableViewCell class] forCellReuseIdentifier:kTrackCellId];
     [self.presenter didLoadView];
 }
 
 #pragma mark - Private
 
+//TODO: Move to presenter
 - (void)updateUserInfoView {
     SCUser *user = self.profile.user;
     self.userInfoView.userNameLabel.text = user.userName != nil ? user.userName : @"";
@@ -67,7 +87,24 @@ static NSString *const kTrackCellId = @"TrackCell";
     else {
         self.userInfoView.fullNameLabel.text = @"";
     }
-    self.userInfoView.locationLabel.text = [NSString stringWithFormat:@"%@, %@", user.city, user.country];
+    
+    NSString *locationString = @"";
+    
+    if (user.city != nil) {
+        [locationString stringByAppendingString:[NSString stringWithFormat:@"%@, ", user.city]];
+    }
+    
+    if (user.country != nil) {
+        [locationString stringByAppendingString:user.country];
+    }
+    
+    self.userInfoView.locationLabel.text = locationString;
+    
+    if (self.profile.avtarImageData != nil) {
+        UIImage *image = [UIImage imageWithData:self.profile.avtarImageData];
+        self.userInfoView.avatarImageView.image = image;
+    }
+
 }
 
 @end

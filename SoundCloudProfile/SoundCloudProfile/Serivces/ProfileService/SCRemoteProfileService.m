@@ -43,19 +43,30 @@
     SCGetFavoritTracksOperation *getTracksOperation =
         [[SCGetFavoritTracksOperation alloc] initWithTracksService:self.tracksService
                                                             userId:identifier];
+    
+    SCDownloadDataOperation *downloadImageOperation =
+        [[SCDownloadDataOperation alloc] initWithHttpService:self.httpService url:nil];
+    
+    [downloadImageOperation addDependency:getUserOperation];
+    
+    __weak SCGetUserOperation *weakUserOperation = getUserOperation;
+    getUserOperation.completionBlock = ^{
+        downloadImageOperation.url = weakUserOperation.user.avatarUrl;
+    };
 
     NSOperation *compileProfileOperation = [[NSOperation alloc] init];
     [compileProfileOperation addDependency:getUserOperation];
     [compileProfileOperation addDependency:getTracksOperation];
+    [compileProfileOperation addDependency:downloadImageOperation];
 
     compileProfileOperation.completionBlock = ^{
         SCUser *user = getUserOperation.user;
         NSArray<SCTrack *> *tracks = getTracksOperation.tracks;
         
         if (user != nil) {
-            //TODO: add image data
             SCProfile *profile = [[SCProfile alloc] initWithUser:user
-                                                          tracks:tracks];
+                                                          tracks:tracks
+                                                 avatarImageData:downloadImageOperation.data];
             success(profile);
         }
         else {
@@ -68,6 +79,7 @@
     [self.queue addOperation:getUserOperation];
     [self.queue addOperation:getTracksOperation];
     [self.queue addOperation:compileProfileOperation];
+    [self.queue addOperation:downloadImageOperation];
 }
 
 @end

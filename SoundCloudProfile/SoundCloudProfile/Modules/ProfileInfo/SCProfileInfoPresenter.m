@@ -1,6 +1,7 @@
 #import "SCProfileInfoPresenter.h"
 
-static const int kUserId = 4324;
+//492436158
+static const int kUserId = 492436158;
 
 @interface SCProfileInfoPresenter ()
 

@@ -64,6 +64,9 @@ static SCTrackView *CommonInit(SCTrackView *self) {
 - (UIImageView *)createArtworkImageView {
     UIImageView *imageView = [[UIImageView alloc] init];
     imageView.translatesAutoresizingMaskIntoConstraints = NO;
+    imageView.contentMode = UIViewContentModeScaleAspectFill;
+    imageView.image = [UIImage imageNamed:@"musicPlaceholder"];
+    imageView.clipsToBounds = YES;
     return imageView;
 }
 
@@ -80,9 +83,11 @@ static SCTrackView *CommonInit(SCTrackView *self) {
 #pragma mark - Layout
 
 - (void)activateConstraints {
-    [[self.leftAnchor constraintEqualToAnchor:self.artworkImageView.leftAnchor] setActive:YES];
-    [[self.topAnchor constraintEqualToAnchor:self.artworkImageView.topAnchor] setActive:YES];
-    [[self.bottomAnchor constraintEqualToAnchor:self.artworkImageView.bottomAnchor] setActive:YES];
+    [[self.leftAnchor constraintEqualToAnchor:self.artworkImageView.leftAnchor ] setActive:YES];
+    [[self.topAnchor constraintEqualToAnchor:self.artworkImageView.topAnchor constant:-kPadding] setActive:YES];
+    [[self.bottomAnchor constraintEqualToAnchor:self.artworkImageView.bottomAnchor constant:kPadding] setActive:YES];
+    [[self.artworkImageView.widthAnchor constraintEqualToAnchor:self.artworkImageView.heightAnchor multiplier:1]
+        setActive:YES];
     
     [[self.titleLabel.leftAnchor constraintEqualToAnchor:self.artworkImageView.rightAnchor constant:kPadding]
         setActive:YES];

@@ -5,7 +5,7 @@ typedef enum : NSUInteger {
     kSCIncorrectTracksFormat,
     kSCIncorrectTracksDataFormat,
     kSCNoRequiredTracksFields
-} SCUserParserError;
+} SCTracksParserError;
 
 //TODO: move to m
 static NSString *const kTracksParserErrorDomain = @"track.parser.scoundCloud";

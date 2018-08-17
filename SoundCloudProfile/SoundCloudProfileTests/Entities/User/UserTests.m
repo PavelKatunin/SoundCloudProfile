@@ -14,12 +14,16 @@
                                              userName:@"pkatunin"
                                              fullName:@"Pavel Katunin"
                                       userDescription:@"Some tracks I love to listen to"
-                                            avatarUrl:avatarUrl];
+                                            avatarUrl:avatarUrl
+                                              country:@"Russia"
+                                                 city:@"Saint-Petersburg"];
     XCTAssertNotNil(user.identifier);
     XCTAssertNotNil(user.userName);
     XCTAssertNotNil(user.fullName);
     XCTAssertNotNil(user.userDescription);
     XCTAssertNotNil(user.avatarUrl);
+    XCTAssertNotNil(user.country);
+    XCTAssertNotNil(user.city);
 }
 
 - (void)testRequiredFieldsInitialization {
@@ -27,12 +31,16 @@
                                              userName:@"pkatunin"
                                              fullName:nil
                                       userDescription:nil
-                                            avatarUrl:nil];
+                                            avatarUrl:nil
+                                              country:nil
+                                                 city:nil];
     XCTAssertNotNil(user.identifier);
     XCTAssertNotNil(user.userName);
     XCTAssertNil(user.fullName);
     XCTAssertNil(user.userDescription);
     XCTAssertNil(user.avatarUrl);
+    XCTAssertNil(user.country);
+    XCTAssertNil(user.city);
 }
 
 @end

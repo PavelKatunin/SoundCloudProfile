@@ -5,6 +5,8 @@ static NSString *const kUserNameKey = @"username";
 static NSString *const kFullNameKey = @"full_name";
 static NSString *const kUserDescriptionKey = @"description";
 static NSString *const kAvatarUrlKey = @"avatar_url";
+static NSString *const kCountryKey = @"country";
+static NSString *const kCityKey = @"city";
 
 @implementation SCUserJSONParser
 
@@ -46,13 +48,17 @@ static NSString *const kAvatarUrlKey = @"avatar_url";
     NSString *userDescription = dictionary[kUserDescriptionKey];
     NSString *avatarUrlString = dictionary[kAvatarUrlKey];
     NSURL *avatarUrl = [NSURL URLWithString:avatarUrlString];
+    NSString *country = dictionary[kCountryKey];
+    NSString *city = dictionary[kCityKey];
     
     if (identifier != nil && userName != nil) {
         user = [[SCUser alloc] initWithIdentifier:identifier
                                          userName:userName
                                          fullName:fullName
                                   userDescription:userDescription
-                                        avatarUrl:avatarUrl];
+                                        avatarUrl:avatarUrl
+                                          country:country
+                                             city:city];
     }
     else {
         *error = [NSError errorWithDomain:kUserParserErrorDomain

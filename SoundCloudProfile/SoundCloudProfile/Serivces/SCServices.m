@@ -4,6 +4,9 @@
 #import "SCRemoteUserService.h"
 #import "SCProdEnvironmentService.h"
 #import "SCUserJSONParser.h"
+#import "SCRemoteTracksService.h"
+#import "SCTracksJSONParser.h"
+#import "SCRemoteProfileService.h"
 
 @interface SCServices ()
 
@@ -41,6 +44,14 @@
                                                              authentication:self.authenticationService
                                                                        http:self.httpService
                                                                      parser:userParser];
+        SCTracksJSONParser *tracksParser = [[SCTracksJSONParser alloc] init];
+        self.tracksService = [[SCRemoteTracksService alloc] initWithParser:tracksParser
+                                                               httpService:self.httpService
+                                                            authentication:self.authenticationService
+                                                               environment:self.environmentService];
+        self.profileService = [[SCRemoteProfileService alloc] initWithUserService:self.userService
+                                                                    tracksService:self.tracksService
+                                                                      httpService:self.httpService];
     }
     
     return self;

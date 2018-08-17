@@ -16,8 +16,9 @@
                                              userName:@"pkatunin"
                                              fullName:@"Pavel Katunin"
                                       userDescription:@"Some tracks I love to listen to"
-                                            avatarUrl:avatarUrl];
-    
+                                            avatarUrl:avatarUrl
+                                              country:@"Russia"
+                                                 city:@"Saint-Petersburg"];
     NSURL *artwork =
         [NSURL URLWithString:@"https://upload.wikimedia.org/wikipedia/en/thumb" \
                               "/4/48/Papa_Roach_Infest.jpg/220px-Papa_Roach_Infest.jpg"];
@@ -25,10 +26,12 @@
                                                    title:@"Scars"
                                                 duration:@(18000)
                                                  artwork:artwork
-                                                   genre:@"Rock"];
+                                                   genre:@"Rock"
+                                          durationString:@"10:10"];
     
     SCProfile *profile = [[SCProfile alloc] initWithUser:user
-                                                  tracks:@[track]];
+                                                  tracks:@[track]
+                                         avatarImageData:nil];
     
     XCTAssertNotNil(profile.user);
     XCTAssertNotNil(profile.tracks);
@@ -42,10 +45,13 @@
                                              userName:@"pkatunin"
                                              fullName:@"Pavel Katunin"
                                       userDescription:@"Some tracks I love to listen to"
-                                            avatarUrl:avatarUrl];
+                                            avatarUrl:avatarUrl
+                                              country:@"Russia"
+                                                 city:@"Saint-Petersburg"];
     
     SCProfile *profile = [[SCProfile alloc] initWithUser:user
-                                                  tracks:nil];
+                                                  tracks:nil
+                                         avatarImageData:nil];
     
     XCTAssertNotNil(profile.user);
     XCTAssertNil(profile.tracks);

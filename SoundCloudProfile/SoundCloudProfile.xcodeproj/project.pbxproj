@@ -10,6 +10,7 @@
 		7613EC1A21261C93009F9CDA /* SCProfileInfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7613EC1921261C93009F9CDA /* SCProfileInfoTableViewController.m */; };
 		7613EC2121261D8D009F9CDA /* SCTrackTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7613EC2021261D8D009F9CDA /* SCTrackTableViewCell.m */; };
 		7613EC252126A2CF009F9CDA /* SCProfileInfoRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7613EC242126A2CF009F9CDA /* SCProfileInfoRouter.m */; };
+		7613EC282126A4F0009F9CDA /* SCTrackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7613EC272126A4F0009F9CDA /* SCTrackView.m */; };
 		761507A021206FA10016E397 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7615079F21206FA10016E397 /* AppDelegate.m */; };
 		761507A621206FA10016E397 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 761507A421206FA10016E397 /* Main.storyboard */; };
 		761507A821206FA20016E397 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 761507A721206FA20016E397 /* Assets.xcassets */; };
@@ -72,6 +73,8 @@
 		7613EC2021261D8D009F9CDA /* SCTrackTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCTrackTableViewCell.m; sourceTree = "<group>"; };
 		7613EC232126A2CF009F9CDA /* SCProfileInfoRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCProfileInfoRouter.h; sourceTree = "<group>"; };
 		7613EC242126A2CF009F9CDA /* SCProfileInfoRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCProfileInfoRouter.m; sourceTree = "<group>"; };
+		7613EC262126A4F0009F9CDA /* SCTrackView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCTrackView.h; sourceTree = "<group>"; };
+		7613EC272126A4F0009F9CDA /* SCTrackView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCTrackView.m; sourceTree = "<group>"; };
 		7615079B21206FA10016E397 /* SoundCloudProfile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundCloudProfile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7615079E21206FA10016E397 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7615079F21206FA10016E397 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -86,7 +89,6 @@
 		761507BE21206FA30016E397 /* SoundCloudProfileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoundCloudProfileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		761507C221206FA30016E397 /* SoundCloudProfileUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoundCloudProfileUITests.m; sourceTree = "<group>"; };
 		761507C421206FA30016E397 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		761507D7212070460016E397 /* SCTracksListProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCTracksListProtocols.h; sourceTree = "<group>"; };
 		761507D8212070590016E397 /* SCProfileInfoProtocols.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCProfileInfoProtocols.h; sourceTree = "<group>"; };
 		761507D9212070780016E397 /* SCHTTPService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCHTTPService.h; sourceTree = "<group>"; };
 		761507DB212070AE0016E397 /* SCProfileService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCProfileService.h; sourceTree = "<group>"; };
@@ -114,9 +116,6 @@
 		761508062120758E0016E397 /* GetUserOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetUserOperation.m; sourceTree = "<group>"; };
 		76150808212075B50016E397 /* GetFavoritTracksOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetFavoritTracksOperation.h; sourceTree = "<group>"; };
 		76150809212075B50016E397 /* GetFavoritTracksOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetFavoritTracksOperation.m; sourceTree = "<group>"; };
-		7615080B2120764C0016E397 /* SCUserServiceObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCUserServiceObserver.h; sourceTree = "<group>"; };
-		7615080C2120765C0016E397 /* SCTracksServiceObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCTracksServiceObserver.h; sourceTree = "<group>"; };
-		7615080D212076800016E397 /* SCProfileServiceObserver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCProfileServiceObserver.h; sourceTree = "<group>"; };
 		7617138321255FCE00CBD992 /* SCEnvironmentService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCEnvironmentService.h; sourceTree = "<group>"; };
 		761713852125601100CBD992 /* SCAuthenticationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCAuthenticationService.h; sourceTree = "<group>"; };
 		761713862125608200CBD992 /* SCProdEnvironmentService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCProdEnvironmentService.h; sourceTree = "<group>"; };
@@ -179,6 +178,8 @@
 			children = (
 				7613EC1F21261D8D009F9CDA /* SCTrackTableViewCell.h */,
 				7613EC2021261D8D009F9CDA /* SCTrackTableViewCell.m */,
+				7613EC262126A4F0009F9CDA /* SCTrackView.h */,
+				7613EC272126A4F0009F9CDA /* SCTrackView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -186,6 +187,7 @@
 		7613EC2221262411009F9CDA /* Track */ = {
 			isa = PBXGroup;
 			children = (
+				7613EC1E21261D7E009F9CDA /* View */,
 			);
 			path = Track;
 			sourceTree = "<group>";
@@ -256,7 +258,6 @@
 			children = (
 				7613EC2221262411009F9CDA /* Track */,
 				761507F1212072FC0016E397 /* UserInfo */,
-				761507D321206FCC0016E397 /* TracksList */,
 				761507D221206FC30016E397 /* ProfileInfo */,
 			);
 			path = Modules;
@@ -292,15 +293,6 @@
 			path = ProfileInfo;
 			sourceTree = "<group>";
 		};
-		761507D321206FCC0016E397 /* TracksList */ = {
-			isa = PBXGroup;
-			children = (
-				7613EC1E21261D7E009F9CDA /* View */,
-				761507D7212070460016E397 /* SCTracksListProtocols.h */,
-			);
-			path = TracksList;
-			sourceTree = "<group>";
-		};
 		761507D421206FDA0016E397 /* HTTPService */ = {
 			isa = PBXGroup;
 			children = (
@@ -318,7 +310,6 @@
 				761507DB212070AE0016E397 /* SCProfileService.h */,
 				761507E0212071470016E397 /* SCRemoteProfileService.h */,
 				761507E1212071470016E397 /* SCRemoteProfileService.m */,
-				7615080D212076800016E397 /* SCProfileServiceObserver.h */,
 			);
 			path = ProfileService;
 			sourceTree = "<group>";
@@ -331,7 +322,6 @@
 				761507DC212070BC0016E397 /* SCTracksService.h */,
 				761507DD212071330016E397 /* SCRemoteTracksService.h */,
 				761507DE212071330016E397 /* SCRemoteTracksService.m */,
-				7615080C2120765C0016E397 /* SCTracksServiceObserver.h */,
 			);
 			path = TracksService;
 			sourceTree = "<group>";
@@ -390,7 +380,6 @@
 				761507F4212074770016E397 /* SCUserService.h */,
 				761507F52120748E0016E397 /* SCRemoteUserService.h */,
 				761507F62120748E0016E397 /* SCRemoteUserService.m */,
-				7615080B2120764C0016E397 /* SCUserServiceObserver.h */,
 			);
 			path = UserService;
 			sourceTree = "<group>";
@@ -481,17 +470,9 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		761713A02125E83300CBD992 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		76729CEF2121649C00F720BA /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				761713A02125E83300CBD992 /* Views */,
 				76729CF0212164A300F720BA /* Categories */,
 			);
 			path = Common;
@@ -753,6 +734,7 @@
 				76729CF6212168A300F720BA /* NSString+HTTP.m in Sources */,
 				761507FE212075250016E397 /* SCTrack.m in Sources */,
 				76BD60822124A81A00F8A795 /* SCUserJSONParser.m in Sources */,
+				7613EC282126A4F0009F9CDA /* SCTrackView.m in Sources */,
 				7617139F2125E03900CBD992 /* SCProfileInfoPresenter.m in Sources */,
 				761507EA212071F40016E397 /* SCServices.m in Sources */,
 				76BD606B21248C0F00F8A795 /* SCTracksJSONParser.m in Sources */,

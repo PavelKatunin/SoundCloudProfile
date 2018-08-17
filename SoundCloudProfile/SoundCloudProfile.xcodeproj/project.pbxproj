@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7613EC1A21261C93009F9CDA /* SCProfileInfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7613EC1921261C93009F9CDA /* SCProfileInfoTableViewController.m */; };
+		7613EC2121261D8D009F9CDA /* SCTrackTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7613EC2021261D8D009F9CDA /* SCTrackTableViewCell.m */; };
+		7613EC252126A2CF009F9CDA /* SCProfileInfoRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7613EC242126A2CF009F9CDA /* SCProfileInfoRouter.m */; };
 		761507A021206FA10016E397 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7615079F21206FA10016E397 /* AppDelegate.m */; };
 		761507A621206FA10016E397 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 761507A421206FA10016E397 /* Main.storyboard */; };
 		761507A821206FA20016E397 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 761507A721206FA20016E397 /* Assets.xcassets */; };
@@ -31,7 +34,6 @@
 		761713912125954D00CBD992 /* CorruptedData.json in Resources */ = {isa = PBXBuildFile; fileRef = 761713902125954D00CBD992 /* CorruptedData.json */; };
 		761713932125956E00CBD992 /* CorruptedUser.json in Resources */ = {isa = PBXBuildFile; fileRef = 761713922125956E00CBD992 /* CorruptedUser.json */; };
 		761713972125DE4E00CBD992 /* SCUserInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 761713962125DE4E00CBD992 /* SCUserInfoView.m */; };
-		7617139C2125E00D00CBD992 /* SCProfileInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7617139B2125E00D00CBD992 /* SCProfileInfoViewController.m */; };
 		7617139F2125E03900CBD992 /* SCProfileInfoPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7617139E2125E03900CBD992 /* SCProfileInfoPresenter.m */; };
 		76729CF3212164C100F720BA /* NSDictionary+HTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 76729CF2212164C100F720BA /* NSDictionary+HTTP.m */; };
 		76729CF6212168A300F720BA /* NSString+HTTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 76729CF5212168A300F720BA /* NSString+HTTP.m */; };
@@ -64,6 +66,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7613EC1821261C93009F9CDA /* SCProfileInfoTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCProfileInfoTableViewController.h; sourceTree = "<group>"; };
+		7613EC1921261C93009F9CDA /* SCProfileInfoTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCProfileInfoTableViewController.m; sourceTree = "<group>"; };
+		7613EC1F21261D8D009F9CDA /* SCTrackTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCTrackTableViewCell.h; sourceTree = "<group>"; };
+		7613EC2021261D8D009F9CDA /* SCTrackTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCTrackTableViewCell.m; sourceTree = "<group>"; };
+		7613EC232126A2CF009F9CDA /* SCProfileInfoRouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCProfileInfoRouter.h; sourceTree = "<group>"; };
+		7613EC242126A2CF009F9CDA /* SCProfileInfoRouter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCProfileInfoRouter.m; sourceTree = "<group>"; };
 		7615079B21206FA10016E397 /* SoundCloudProfile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundCloudProfile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7615079E21206FA10016E397 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7615079F21206FA10016E397 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -121,8 +129,6 @@
 		761713922125956E00CBD992 /* CorruptedUser.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CorruptedUser.json; sourceTree = "<group>"; };
 		761713952125DE4E00CBD992 /* SCUserInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCUserInfoView.h; sourceTree = "<group>"; };
 		761713962125DE4E00CBD992 /* SCUserInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCUserInfoView.m; sourceTree = "<group>"; };
-		7617139A2125E00D00CBD992 /* SCProfileInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCProfileInfoViewController.h; sourceTree = "<group>"; };
-		7617139B2125E00D00CBD992 /* SCProfileInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCProfileInfoViewController.m; sourceTree = "<group>"; };
 		7617139D2125E03900CBD992 /* SCProfileInfoPresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCProfileInfoPresenter.h; sourceTree = "<group>"; };
 		7617139E2125E03900CBD992 /* SCProfileInfoPresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCProfileInfoPresenter.m; sourceTree = "<group>"; };
 		76729CF1212164C100F720BA /* NSDictionary+HTTP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+HTTP.h"; sourceTree = "<group>"; };
@@ -168,6 +174,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7613EC1E21261D7E009F9CDA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7613EC1F21261D8D009F9CDA /* SCTrackTableViewCell.h */,
+				7613EC2021261D8D009F9CDA /* SCTrackTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7613EC2221262411009F9CDA /* Track */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Track;
+			sourceTree = "<group>";
+		};
 		7615079221206FA10016E397 = {
 			isa = PBXGroup;
 			children = (
@@ -232,6 +254,7 @@
 		761507D021206FB10016E397 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				7613EC2221262411009F9CDA /* Track */,
 				761507F1212072FC0016E397 /* UserInfo */,
 				761507D321206FCC0016E397 /* TracksList */,
 				761507D221206FC30016E397 /* ProfileInfo */,
@@ -259,10 +282,12 @@
 			isa = PBXGroup;
 			children = (
 				761507D8212070590016E397 /* SCProfileInfoProtocols.h */,
-				7617139A2125E00D00CBD992 /* SCProfileInfoViewController.h */,
-				7617139B2125E00D00CBD992 /* SCProfileInfoViewController.m */,
 				7617139D2125E03900CBD992 /* SCProfileInfoPresenter.h */,
 				7617139E2125E03900CBD992 /* SCProfileInfoPresenter.m */,
+				7613EC1821261C93009F9CDA /* SCProfileInfoTableViewController.h */,
+				7613EC1921261C93009F9CDA /* SCProfileInfoTableViewController.m */,
+				7613EC232126A2CF009F9CDA /* SCProfileInfoRouter.h */,
+				7613EC242126A2CF009F9CDA /* SCProfileInfoRouter.m */,
 			);
 			path = ProfileInfo;
 			sourceTree = "<group>";
@@ -270,6 +295,7 @@
 		761507D321206FCC0016E397 /* TracksList */ = {
 			isa = PBXGroup;
 			children = (
+				7613EC1E21261D7E009F9CDA /* View */,
 				761507D7212070460016E397 /* SCTracksListProtocols.h */,
 			);
 			path = TracksList;
@@ -455,9 +481,17 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		761713A02125E83300CBD992 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		76729CEF2121649C00F720BA /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				761713A02125E83300CBD992 /* Views */,
 				76729CF0212164A300F720BA /* Categories */,
 			);
 			path = Common;
@@ -706,12 +740,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7617138B2125610E00CBD992 /* SCProdAuthenticationService.m in Sources */,
+				7613EC1A21261C93009F9CDA /* SCProfileInfoTableViewController.m in Sources */,
 				761713972125DE4E00CBD992 /* SCUserInfoView.m in Sources */,
 				761507F72120748E0016E397 /* SCRemoteUserService.m in Sources */,
 				761507AE21206FA20016E397 /* main.m in Sources */,
 				761507A021206FA10016E397 /* AppDelegate.m in Sources */,
 				761508072120758E0016E397 /* GetUserOperation.m in Sources */,
-				7617139C2125E00D00CBD992 /* SCProfileInfoViewController.m in Sources */,
 				761507DF212071330016E397 /* SCRemoteTracksService.m in Sources */,
 				761713882125608200CBD992 /* SCProdEnvironmentService.m in Sources */,
 				761508012120753D0016E397 /* SCUser.m in Sources */,
@@ -722,7 +756,9 @@
 				7617139F2125E03900CBD992 /* SCProfileInfoPresenter.m in Sources */,
 				761507EA212071F40016E397 /* SCServices.m in Sources */,
 				76BD606B21248C0F00F8A795 /* SCTracksJSONParser.m in Sources */,
+				7613EC2121261D8D009F9CDA /* SCTrackTableViewCell.m in Sources */,
 				761507FB212075090016E397 /* SCProfile.m in Sources */,
+				7613EC252126A2CF009F9CDA /* SCProfileInfoRouter.m in Sources */,
 				76729CF3212164C100F720BA /* NSDictionary+HTTP.m in Sources */,
 				761507E52120715E0016E397 /* SCRemoteHTTPService.m in Sources */,
 				761507E2212071470016E397 /* SCRemoteProfileService.m in Sources */,

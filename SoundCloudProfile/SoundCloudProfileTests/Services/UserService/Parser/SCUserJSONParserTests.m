@@ -30,6 +30,8 @@
                           " \r\nbrowse recordings with the FiRe app by artwork\r\n\r\ntopbillin.com \r\nfind"\
                           " people to follow on SoundCloud\r\n\r\nchatter.fm \r\nget your account hooked up"\
                           " with a voicebox\r\n\r\nrecbutton.com \r\nrecord straight to your soundcloud account");
+    XCTAssertEqualObjects(user.country, @"Germany");
+    XCTAssertEqualObjects(user.city, @"Berlin");
 }
 
 - (void)testParseUserWithoutRequiredFields {

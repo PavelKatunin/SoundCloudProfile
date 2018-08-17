@@ -16,8 +16,9 @@
                                              userName:@"pkatunin"
                                              fullName:@"Pavel Katunin"
                                       userDescription:@"Some tracks I love to listen to"
-                                            avatarUrl:avatarUrl];
-    
+                                            avatarUrl:avatarUrl
+                                              country:@"Russia"
+                                                 city:@"Saint-Petersburg"];
     NSURL *artwork =
         [NSURL URLWithString:@"https://upload.wikimedia.org/wikipedia/en/thumb" \
                               "/4/48/Papa_Roach_Infest.jpg/220px-Papa_Roach_Infest.jpg"];
@@ -42,7 +43,9 @@
                                              userName:@"pkatunin"
                                              fullName:@"Pavel Katunin"
                                       userDescription:@"Some tracks I love to listen to"
-                                            avatarUrl:avatarUrl];
+                                            avatarUrl:avatarUrl
+                                              country:@"Russia"
+                                                 city:@"Saint-Petersburg"];
     
     SCProfile *profile = [[SCProfile alloc] initWithUser:user
                                                   tracks:nil];

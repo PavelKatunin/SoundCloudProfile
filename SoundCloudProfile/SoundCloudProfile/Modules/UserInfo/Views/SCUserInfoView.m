@@ -4,7 +4,7 @@ static const CGFloat kPadding = 8;
 
 @interface SCUserInfoView ()
 
-- (UIView *)createBackgroundView;
+- (SCFloatingBackgroundView *)createBackgroundView;
 - (UILabel *)createNameLabel;
 - (UILabel *)createFullNameLabel;
 - (UILabel *)createLocationLabel;
@@ -16,7 +16,7 @@ static const CGFloat kPadding = 8;
 
 static SCUserInfoView *CommonInit(SCUserInfoView *self) {
     if (self != nil) {
-        UIView *backgroundView = [self createBackgroundView];
+        SCFloatingBackgroundView *backgroundView = [self createBackgroundView];
         [self addSubview:backgroundView];
         self.backgroundView = backgroundView;
         
@@ -46,8 +46,7 @@ static SCUserInfoView *CommonInit(SCUserInfoView *self) {
 #pragma mark - Views
 
 - (UIView *)createBackgroundView {
-    UIView *view = [[UIView alloc] initWithFrame:CGRectZero];
-    view.backgroundColor = [UIColor lightGrayColor];
+    SCFloatingBackgroundView *view = [[SCFloatingBackgroundView alloc] initWithBubblesCount:4];
     view.translatesAutoresizingMaskIntoConstraints = false;
     return view;
 }
@@ -55,18 +54,24 @@ static SCUserInfoView *CommonInit(SCUserInfoView *self) {
 - (UILabel *)createNameLabel {
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
     label.translatesAutoresizingMaskIntoConstraints = false;
+    label.textColor = [UIColor whiteColor];
+    label.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.5];
     return label;
 }
 
 - (UILabel *)createFullNameLabel {
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
     label.translatesAutoresizingMaskIntoConstraints = false;
+    label.textColor = [UIColor whiteColor];
+    label.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.5];
     return label;
 }
 
 - (UILabel *)createLocationLabel {
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectZero];
     label.translatesAutoresizingMaskIntoConstraints = false;
+    label.textColor = [UIColor whiteColor];
+    label.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.5];
     return label;
 }
 

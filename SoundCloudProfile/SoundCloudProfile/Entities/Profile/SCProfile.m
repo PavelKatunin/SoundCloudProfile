@@ -14,7 +14,8 @@
 
 #pragma mark - Initialization
 
-- (instancetype)initWithUser:(nonnull SCUser *)user tracks:(nullable NSArray *)tracks {
+- (instancetype)initWithUser:(nonnull SCUser *)user
+                      tracks:(nullable NSArray *)tracks {
     self = [super init];
     if (self != nil) {
         self.user = user;

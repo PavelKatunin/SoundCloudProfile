@@ -1,4 +1,5 @@
 #import <UIKit/UIKit.h>
+#import "SCFloatingBackgroundView.h"
 
 @interface SCUserInfoView : UIView
 
@@ -6,6 +7,6 @@
 @property (nonatomic, weak) UILabel *userNameLabel;
 @property (nonatomic, weak) UILabel *fullNameLabel;
 @property (nonatomic, weak) UILabel *locationLabel;
-@property (nonatomic, weak) UIView *backgroundView;
+@property (nonatomic, weak) SCFloatingBackgroundView *backgroundView;
 
 @end

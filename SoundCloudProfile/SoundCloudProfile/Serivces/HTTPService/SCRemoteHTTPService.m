@@ -1,5 +1,6 @@
 #import "SCRemoteHTTPService.h"
 #import "NSDictionary+HTTP.h"
+#import "NSString+HTTP.h"
 
 @interface SCRemoteHTTPService ()
 
@@ -27,7 +28,16 @@
 - (void)downloadDataByUrl:(nonnull NSURL *)url
                   success:(SCHTTPSuccess)success
                      fail:(SCHTTPFail)fail {
-    
+    [[self.session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data,
+                                                           NSURLResponse * _Nullable response,
+                                                           NSError * _Nullable error) {
+        if (data == nil && error != nil) {
+            fail(error);
+        }
+        else {
+            success(data);
+        }
+    }] resume];
 }
 
 - (void)getByUrl:(nonnull NSURL *)url
@@ -36,8 +46,12 @@
          success:(SCHTTPSuccess)success
             fail:(SCHTTPFail)fail {
     
-    NSString *requestUrlString = [NSString stringWithFormat:@"?%@", [parameters parametersString]];
-    NSURL *requestUrl = [url URLByAppendingPathComponent:requestUrlString];
+    NSString *requestUrlString =
+        [[NSString stringWithFormat:@"%@", [parameters parametersString]] stringByAddingPercentEncoding];
+    requestUrlString = [@"\?" stringByAppendingString:requestUrlString];
+
+    NSURL *requestUrl = [NSURL URLWithString:[url.absoluteString stringByAppendingString:requestUrlString]];
+    
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:requestUrl
                                                                 cachePolicy:NSURLRequestUseProtocolCachePolicy
                                                             timeoutInterval:15.0];

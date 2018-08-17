@@ -1,5 +1,7 @@
 #import "SCProfileInfoPresenter.h"
 
+static const int kUserId = 4324;
+
 @interface SCProfileInfoPresenter ()
 
 @property (nonatomic, strong) id <SCProfileService> profileService;
@@ -24,7 +26,16 @@
 #pragma mark - Public
 
 - (void)didLoadView {
-
+    [self.profileService getProfileByUserId:@(kUserId)
+                                    success:^(SCProfile *profile) {
+                                        dispatch_async(dispatch_get_main_queue(), ^{
+                                            self.view.profile = profile;
+                                        });
+                                    } fail:^(NSError *error) {
+                                        dispatch_async(dispatch_get_main_queue(), ^{
+                                            [self.view showError];
+                                        });
+                                    }];
 }
 
 - (void)didPullToRefresh {

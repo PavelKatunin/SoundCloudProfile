@@ -27,6 +27,7 @@ static NSString *const kUserPath = @"users";
         self.environment = environment;
         self.authentication = authentication;
         self.http = http;
+        self.parser = parser;
     }
     return self;
 }

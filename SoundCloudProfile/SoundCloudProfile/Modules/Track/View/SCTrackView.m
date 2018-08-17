@@ -91,6 +91,9 @@ static SCTrackView *CommonInit(SCTrackView *self) {
     
     [[self.titleLabel.leftAnchor constraintEqualToAnchor:self.artworkImageView.rightAnchor constant:kPadding]
         setActive:YES];
+    [[self.rightAnchor constraintEqualToAnchor:self.titleLabel.rightAnchor constant:kPadding]
+        setActive:YES];
+    
     [[self.centerYAnchor constraintEqualToAnchor:self.titleLabel.bottomAnchor constant:0] setActive:YES];
     
     [[self.durationLabel.leftAnchor constraintEqualToAnchor:self.artworkImageView.rightAnchor constant:kPadding]

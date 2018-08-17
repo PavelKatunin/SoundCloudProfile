@@ -2,6 +2,7 @@
 #import <QuartzCore/QuartzCore.h>
 
 static const CGFloat kPadding = 8;
+static const CGFloat kImageSize = 120.;
 
 @interface SCUserInfoView ()
 
@@ -81,7 +82,7 @@ static SCUserInfoView *CommonInit(SCUserInfoView *self) {
     UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectZero];
     imageView.translatesAutoresizingMaskIntoConstraints = false;
     imageView.contentMode = UIViewContentModeScaleAspectFill;
-    imageView.layer.cornerRadius = 50.;
+    imageView.layer.cornerRadius = kImageSize / 2;
     imageView.layer.masksToBounds = YES;
     return imageView;
 }
@@ -114,7 +115,7 @@ static SCUserInfoView *CommonInit(SCUserInfoView *self) {
     [[self.centerXAnchor constraintEqualToAnchor:self.avatarImageView.centerXAnchor] setActive:YES];
     [[self.centerYAnchor constraintEqualToAnchor:self.avatarImageView.centerYAnchor] setActive:YES];
     [[self.avatarImageView.widthAnchor constraintEqualToAnchor:self.avatarImageView.heightAnchor] setActive:YES];
-    [[self.avatarImageView.widthAnchor constraintEqualToConstant:100] setActive:YES];
+    [[self.avatarImageView.widthAnchor constraintEqualToConstant:kImageSize] setActive:YES];
     
     [[self.rightAnchor constraintEqualToAnchor:self.locationLabel.rightAnchor constant: kPadding] setActive:YES];
     [[self.bottomAnchor constraintEqualToAnchor:self.locationLabel.bottomAnchor constant: kPadding] setActive:YES];

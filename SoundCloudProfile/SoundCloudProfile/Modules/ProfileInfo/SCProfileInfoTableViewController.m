@@ -4,11 +4,15 @@
 #import "SCTrack.h"
 
 static NSString *const kTrackCellId = @"TrackCell";
+static const CGFloat kFavoritesTitleLabelFontSize = 17.;
+static const CGFloat kFavoritesLabelHeight = 40.;
+static const CGFloat kUserInfoViewHeight = 170.;
+static const CGFloat kTrackCellHeight = 84.;
 
 @interface SCProfileInfoTableViewController ()
 
-@property (nonatomic, strong) SCUserInfoView *userInfoView;
-
+@property (nonatomic, weak) SCUserInfoView *userInfoView;
+@property (nonatomic, strong) UIStackView *favoritesHeaderView;
 
 @end
 
@@ -16,14 +20,37 @@ static NSString *const kTrackCellId = @"TrackCell";
 
 #pragma mark - Public
 
-- (void)setProfile:(SCProfile *)profile {
-    _profile = profile;
+- (void)setNameText:(NSString *)nameText {
+    _nameText = nameText;
+     [self updateUserInfoView];
+}
+
+- (void)setFullNameText:(NSString *)fullNameText {
+    _fullNameText = fullNameText;
     [self updateUserInfoView];
+}
+
+- (void)setLocationText:(NSString *)locationText {
+    _locationText = locationText;
+    [self updateUserInfoView];
+}
+
+- (void)stopRefreshing {
     [self.refreshControl endRefreshing];
+}
+
+- (void)setTracks:(NSArray<SCTrack *> *)tracks {
+    _tracks = tracks;
     [self.tableView reloadData];
 }
 
+- (void)setImage:(UIImage *)image {
+    _image = image;
+    [self updateUserInfoView];
+}
+
 - (void)showError {
+    //TODO: IMplement
     [self.refreshControl endRefreshing];
 }
 
@@ -34,27 +61,22 @@ static NSString *const kTrackCellId = @"TrackCell";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSLog(@"%ld", self.profile.tracks.count);
-    return self.profile.tracks.count;
+    return self.tracks.count;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    if (self.userInfoView == nil) {
-        SCUserInfoView *userInfoView = [[SCUserInfoView alloc] initWithFrame:CGRectZero];
-        userInfoView.translatesAutoresizingMaskIntoConstraints = false;
-        [[userInfoView.heightAnchor constraintEqualToConstant:170] setActive:YES];
-        [[userInfoView.widthAnchor constraintEqualToConstant:self.view.frame.size.width] setActive:YES];
-        self.userInfoView = userInfoView;
+    if (self.favoritesHeaderView == nil) {
+        self.favoritesHeaderView = [self createFavoritesHeaderView];
         [self updateUserInfoView];
     }
-    return self.userInfoView;
+    return self.favoritesHeaderView;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kTrackCellId forIndexPath:indexPath];
     NSAssert([cell isKindOfClass:[SCTrackTableViewCell class]], @"Unsupported cell type");
     SCTrackTableViewCell *trackCell = (SCTrackTableViewCell *)cell;
-    SCTrack *track = self.profile.tracks[indexPath.row];
+    SCTrack *track = self.tracks[indexPath.row];
     trackCell.trackView.titleLabel.text = track.title;
     trackCell.trackView.durationLabel.text = track.durationString;
     trackCell.trackView.genreLabel.text = track.genre;
@@ -62,7 +84,7 @@ static NSString *const kTrackCellId = @"TrackCell";
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 84.;
+    return kTrackCellHeight;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -83,38 +105,37 @@ static NSString *const kTrackCellId = @"TrackCell";
 
 #pragma mark - Private
 
+- (UIStackView *)createFavoritesHeaderView {
+    SCUserInfoView *userInfoView = [[SCUserInfoView alloc] initWithFrame:CGRectZero];
+    userInfoView.translatesAutoresizingMaskIntoConstraints = false;
+    [[userInfoView.heightAnchor constraintEqualToConstant:kUserInfoViewHeight] setActive:YES];
+    [[userInfoView.widthAnchor constraintEqualToConstant:self.view.frame.size.width] setActive:YES];
+    self.userInfoView = userInfoView;
+    
+    UILabel *favoritesLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+    favoritesLabel.translatesAutoresizingMaskIntoConstraints = false;
+    favoritesLabel.text = NSLocalizedString(@"Favorites", nil);
+    favoritesLabel.font = [UIFont boldSystemFontOfSize:kFavoritesTitleLabelFontSize];
+    [[favoritesLabel.heightAnchor constraintEqualToConstant:kFavoritesLabelHeight] setActive:YES];
+    
+    UIStackView *favoritesHeaderView = [[UIStackView alloc] initWithArrangedSubviews: @[userInfoView, favoritesLabel]];
+    favoritesHeaderView.axis = UILayoutConstraintAxisVertical;
+    favoritesHeaderView.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    return favoritesHeaderView;
+}
+
 - (void)refreshControlDidChangeValue:(id)sender {
     [self.presenter didPullToRefresh];
 }
 
-//TODO: Move to presenter
 - (void)updateUserInfoView {
-    SCUser *user = self.profile.user;
-    self.userInfoView.userNameLabel.text = user.userName != nil ? user.userName : @"";
-    if (![user.userName isEqualToString:user.fullName]) {
-        self.userInfoView.fullNameLabel.text = user.fullName != nil ? user.fullName : @"";
-    }
-    else {
-        self.userInfoView.fullNameLabel.text = @"";
-    }
-    
-    NSString *locationString = @"";
-    
-    if (user.city != nil) {
-        locationString = [locationString stringByAppendingString:[NSString stringWithFormat:@"%@, ", user.city]];
-    }
-    
-    if (user.country != nil) {
-        locationString = [locationString stringByAppendingString:user.country];
-    }
-    
-    self.userInfoView.locationLabel.text = locationString;
-    
-    if (self.profile.avtarImageData != nil) {
-        UIImage *image = [UIImage imageWithData:self.profile.avtarImageData];
-        self.userInfoView.avatarImageView.image = image;
-    }
-
+    self.userInfoView.userNameLabel.text = self.nameText;
+    self.userInfoView.fullNameLabel.text = self.fullNameText;
+    self.userInfoView.locationLabel.text = self.locationText;
+    self.userInfoView.avatarImageView.image = self.image;
 }
 
 @end
+
+

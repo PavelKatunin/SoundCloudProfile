@@ -2,7 +2,7 @@
 #import <QuartzCore/QuartzCore.h>
 
 static const CGFloat kPadding = 8;
-static const CGFloat kImageSize = 120.;
+static const CGFloat kImageSize = 140.;
 
 @interface SCUserInfoView ()
 

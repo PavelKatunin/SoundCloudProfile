@@ -9,6 +9,7 @@ static const NSTimeInterval kUpdateProfileInterval = 120;
 @property (nonatomic, strong) id <SCProfileService> profileService;
 @property (nonatomic, strong) id <SCHTTPService> httpService;
 @property (nonatomic, strong) NSTimer *updateTimer;
+@property (nonatomic, strong) SCProfile *profile;
 
 @end
 
@@ -27,7 +28,7 @@ static const NSTimeInterval kUpdateProfileInterval = 120;
         self.updateTimer = [NSTimer timerWithTimeInterval:kUpdateProfileInterval
                                                   repeats:YES
                                                     block:^(NSTimer * _Nonnull timer) {
-                                                        [weakSelf updateProfile];
+                                                        [weakSelf stratUpdatingProfile];
                                                     }];
         [[NSRunLoop mainRunLoop] addTimer:self.updateTimer forMode:NSRunLoopCommonModes];
     }
@@ -37,24 +38,58 @@ static const NSTimeInterval kUpdateProfileInterval = 120;
 #pragma mark - Public
 
 - (void)didLoadView {
-    [self updateProfile];
+    [self stratUpdatingProfile];
 }
 
-- (void)updateProfile {
+- (void)stratUpdatingProfile {
+    __weak SCProfileInfoPresenter *weakSelf = self;
     [self.profileService getProfileByUserId:@(kUserId)
                                     success:^(SCProfile *profile) {
                                         dispatch_async(dispatch_get_main_queue(), ^{
-                                            self.view.profile = profile;
+                                            weakSelf.profile = profile;
+                                            [weakSelf updateViewProfile];
+                                            [weakSelf.view stopRefreshing];
                                         });
                                     } fail:^(NSError *error) {
                                         dispatch_async(dispatch_get_main_queue(), ^{
-                                            [self.view showError];
+                                            [weakSelf.view showError];
+                                            [weakSelf.view stopRefreshing];
                                         });
                                     }];
 }
 
 - (void)didPullToRefresh {
-    [self updateProfile];
+    [self stratUpdatingProfile];
+}
+
+- (void)updateViewProfile {
+    SCUser *user = self.profile.user;
+    self.view.nameText = user.userName != nil ? user.userName : @"";
+    if (![user.userName isEqualToString:user.fullName]) {
+        self.view.fullNameText = user.fullName != nil ? user.fullName : @"";
+    }
+    else {
+        self.view.fullNameText = @"";
+    }
+    
+    NSString *locationString = @"";
+    
+    if (user.city != nil) {
+        locationString = [locationString stringByAppendingString:[NSString stringWithFormat:@"%@, ", user.city]];
+    }
+    
+    if (user.country != nil) {
+        locationString = [locationString stringByAppendingString:user.country];
+    }
+    
+    self.view.locationText = locationString;
+    
+    if (self.profile.avtarImageData != nil) {
+        UIImage *image = [UIImage imageWithData:self.profile.avtarImageData];
+        self.view.image = image;
+    }
+    
+    self.view.tracks = self.profile.tracks;
 }
 
 @end

@@ -51,6 +51,7 @@ static SCTrackView *CommonInit(SCTrackView *self) {
     UILabel *label = [[UILabel alloc] init];
     label.translatesAutoresizingMaskIntoConstraints = NO;
     label.font = [UIFont systemFontOfSize:12.];
+    label.textColor = [UIColor lightGrayColor];
     return label;
 }
 
@@ -58,6 +59,7 @@ static SCTrackView *CommonInit(SCTrackView *self) {
     UILabel *label = [[UILabel alloc] init];
     label.translatesAutoresizingMaskIntoConstraints = NO;
     label.font = [UIFont systemFontOfSize:12.];
+    label.textColor = [UIColor lightGrayColor];
     return label;
 }
 

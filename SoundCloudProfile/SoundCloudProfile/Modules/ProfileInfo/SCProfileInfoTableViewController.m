@@ -105,6 +105,26 @@ static const CGFloat kTrackCellHeight = 84.;
 
 #pragma mark - Private
 
+- (UIStackView *)createFavoritesTitleStack {
+    UILabel *favoritesLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+    favoritesLabel.translatesAutoresizingMaskIntoConstraints = NO;
+    favoritesLabel.text = NSLocalizedString(@"Favorite tracks", nil);
+    favoritesLabel.font = [UIFont boldSystemFontOfSize:kFavoritesTitleLabelFontSize];
+    [[favoritesLabel.heightAnchor constraintEqualToConstant:kFavoritesLabelHeight] setActive:YES];
+    
+    UIView *offsetView = [[UIView alloc] initWithFrame:CGRectZero];
+    offsetView.translatesAutoresizingMaskIntoConstraints = NO;
+    [[offsetView.widthAnchor constraintEqualToConstant:8] setActive:YES];
+    [[offsetView.heightAnchor constraintEqualToConstant:kFavoritesLabelHeight] setActive:YES];
+    
+    UIStackView *stackView = [[UIStackView alloc] initWithArrangedSubviews:@[offsetView, favoritesLabel]];
+    stackView.distribution = UIStackViewDistributionFillProportionally;
+    stackView.translatesAutoresizingMaskIntoConstraints = NO;
+    stackView.axis = UILayoutConstraintAxisHorizontal;
+    stackView.backgroundColor = [UIColor greenColor];
+    return stackView;
+}
+
 - (UIStackView *)createFavoritesHeaderView {
     SCUserInfoView *userInfoView = [[SCUserInfoView alloc] initWithFrame:CGRectZero];
     userInfoView.translatesAutoresizingMaskIntoConstraints = false;
@@ -112,13 +132,10 @@ static const CGFloat kTrackCellHeight = 84.;
     [[userInfoView.widthAnchor constraintEqualToConstant:self.view.frame.size.width] setActive:YES];
     self.userInfoView = userInfoView;
     
-    UILabel *favoritesLabel = [[UILabel alloc] initWithFrame:CGRectZero];
-    favoritesLabel.translatesAutoresizingMaskIntoConstraints = false;
-    favoritesLabel.text = NSLocalizedString(@"Favorites", nil);
-    favoritesLabel.font = [UIFont boldSystemFontOfSize:kFavoritesTitleLabelFontSize];
-    [[favoritesLabel.heightAnchor constraintEqualToConstant:kFavoritesLabelHeight] setActive:YES];
+    UIStackView *favoritesTitleStack = [self createFavoritesTitleStack];
     
-    UIStackView *favoritesHeaderView = [[UIStackView alloc] initWithArrangedSubviews: @[userInfoView, favoritesLabel]];
+    UIStackView *favoritesHeaderView = [[UIStackView alloc] initWithArrangedSubviews: @[userInfoView,
+                                                                                        favoritesTitleStack]];
     favoritesHeaderView.axis = UILayoutConstraintAxisVertical;
     favoritesHeaderView.translatesAutoresizingMaskIntoConstraints = NO;
     

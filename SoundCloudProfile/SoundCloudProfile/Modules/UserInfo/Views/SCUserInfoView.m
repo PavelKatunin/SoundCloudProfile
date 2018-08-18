@@ -48,7 +48,7 @@ static SCUserInfoView *CommonInit(SCUserInfoView *self) {
 #pragma mark - Views
 
 - (UIView *)createBackgroundView {
-    SCFloatingBackgroundView *view = [[SCFloatingBackgroundView alloc] initWithBubblesCount:4];
+    SCFloatingBackgroundView *view = [[SCFloatingBackgroundView alloc] initWithBubblesCount:8];
     view.translatesAutoresizingMaskIntoConstraints = false;
     return view;
 }

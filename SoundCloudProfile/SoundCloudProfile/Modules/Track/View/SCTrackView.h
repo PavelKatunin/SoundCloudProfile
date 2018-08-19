@@ -7,4 +7,6 @@
 @property (nonatomic, weak) UILabel *genreLabel;
 @property (nonatomic, weak) UIImageView *artworkImageView;
 
+- (void)prepareForReuse;
+
 @end

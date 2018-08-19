@@ -38,6 +38,15 @@ static SCTrackView *CommonInit(SCTrackView *self) {
 
 @implementation SCTrackView
 
+#pragma mark - Public
+
+- (void)prepareForReuse {
+    self.artworkImageView.image = [UIImage imageNamed:@"musicPlaceholder"];
+    self.titleLabel.text = @"";
+    self.durationLabel.text = @"";
+    self.genreLabel.text = @"";
+}
+
 #pragma mark - Views
 
 - (UILabel *)createTitleLabel {

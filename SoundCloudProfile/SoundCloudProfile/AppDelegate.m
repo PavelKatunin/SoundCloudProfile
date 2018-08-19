@@ -4,8 +4,6 @@
 #import "SCServices.h"
 #import "SCProfileInfoPresenter.h"
 
-static NSString *const kProfileId = @"actuallygrimes";
-
 @interface AppDelegate ()
 
 @property (nonatomic, strong) SCRemoteHTTPService *http;

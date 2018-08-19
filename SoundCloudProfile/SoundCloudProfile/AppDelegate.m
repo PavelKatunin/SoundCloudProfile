@@ -1,12 +1,7 @@
 #import "AppDelegate.h"
-#import "SCRemoteHTTPService.h"
-#import "SCProfileInfoTableViewController.h"
-#import "SCServices.h"
-#import "SCProfileInfoPresenter.h"
+#import "SCProfileInfoRouter.h"
 
 @interface AppDelegate ()
-
-@property (nonatomic, strong) SCRemoteHTTPService *http;
 
 @end
 
@@ -14,16 +9,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    SCServices *services = [SCServices shared];
-    
-    SCProfileInfoPresenter *presenter =
-        [[SCProfileInfoPresenter alloc] initWithUserProfileService:services.profileService
-                                                       httpService:services.httpService];
-    SCProfileInfoTableViewController *rootController =
-        [[SCProfileInfoTableViewController alloc] initWithStyle:UITableViewStylePlain];
-    rootController.presenter = presenter;
-    presenter.view = rootController;
-    self.window.rootViewController = rootController;
+    UIViewController *controller = [SCProfileInfoRouter createProfileController];
+    self.window.rootViewController = controller;
     return YES;
 }
 

@@ -9,9 +9,16 @@
 
 @protocol SCProfileInfoViewProtocol;
 
-@protocol SCProfileInfoPresenterProtocol <NSObject>
+@protocol SCProfileInfoRouterProtocol
+
++ (UIViewController<SCProfileInfoViewProtocol> *)createProfileController;
+
+@end
+
+@protocol SCProfileInfoPresenterProtocol <NSObject, SCProfileInfoInput>
 
 @property (nonatomic, weak) id <SCProfileInfoViewProtocol> view;
+@property (nonatomic, strong) id <SCProfileInfoRouterProtocol> router;
 
 - (void)didPullToRefresh;
 - (void)didLoadView;

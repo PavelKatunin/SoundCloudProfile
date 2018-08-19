@@ -57,6 +57,7 @@
 		76BD60822124A81A00F8A795 /* SCUserJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BD60812124A81A00F8A795 /* SCUserJSONParser.m */; };
 		76EDFC992129EEEC009D8006 /* SCUserParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 76EDFC982129EEEC009D8006 /* SCUserParser.m */; };
 		76EDFC9B2129EF6E009D8006 /* SCTracksParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 76EDFC9A2129EF6E009D8006 /* SCTracksParser.m */; };
+		76EDFC9E2129FC60009D8006 /* SCGetProfileOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 76EDFC9D2129FC60009D8006 /* SCGetProfileOperation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -174,6 +175,8 @@
 		76BD60812124A81A00F8A795 /* SCUserJSONParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCUserJSONParser.m; sourceTree = "<group>"; };
 		76EDFC982129EEEC009D8006 /* SCUserParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCUserParser.m; sourceTree = "<group>"; };
 		76EDFC9A2129EF6E009D8006 /* SCTracksParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCTracksParser.m; sourceTree = "<group>"; };
+		76EDFC9C2129FC60009D8006 /* SCGetProfileOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCGetProfileOperation.h; sourceTree = "<group>"; };
+		76EDFC9D2129FC60009D8006 /* SCGetProfileOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCGetProfileOperation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,7 +204,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7613EC1E21261D7E009F9CDA /* View */ = {
+		7613EC1E21261D7E009F9CDA /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				7613EC1F21261D8D009F9CDA /* SCTrackTableViewCell.h */,
@@ -209,13 +212,13 @@
 				7613EC262126A4F0009F9CDA /* SCTrackView.h */,
 				7613EC272126A4F0009F9CDA /* SCTrackView.m */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		7613EC2221262411009F9CDA /* Track */ = {
 			isa = PBXGroup;
 			children = (
-				7613EC1E21261D7E009F9CDA /* View */,
+				7613EC1E21261D7E009F9CDA /* Views */,
 			);
 			path = Track;
 			sourceTree = "<group>";
@@ -457,6 +460,8 @@
 		761508022120755A0016E397 /* Operations */ = {
 			isa = PBXGroup;
 			children = (
+				76EDFC9C2129FC60009D8006 /* SCGetProfileOperation.h */,
+				76EDFC9D2129FC60009D8006 /* SCGetProfileOperation.m */,
 			);
 			path = Operations;
 			sourceTree = "<group>";
@@ -799,6 +804,7 @@
 				761508072120758E0016E397 /* SCGetUserOperation.m in Sources */,
 				761507DF212071330016E397 /* SCRemoteTracksService.m in Sources */,
 				761713882125608200CBD992 /* SCProdEnvironmentService.m in Sources */,
+				76EDFC9E2129FC60009D8006 /* SCGetProfileOperation.m in Sources */,
 				761508012120753D0016E397 /* SCUser.m in Sources */,
 				7615080A212075B50016E397 /* SCGetFavoritTracksOperation.m in Sources */,
 				76729CF6212168A300F720BA /* NSString+HTTP.m in Sources */,

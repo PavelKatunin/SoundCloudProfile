@@ -11,6 +11,7 @@
         [self.contentView addSubview:trackView];
         self.trackView = trackView;
         
+        //TODO: Move to layout extension
         [[trackView.topAnchor constraintEqualToAnchor:self.contentView.topAnchor] setActive:YES];
         [[trackView.leftAnchor constraintEqualToAnchor:self.contentView.leftAnchor] setActive:YES];
         [[trackView.rightAnchor constraintEqualToAnchor:self.contentView.rightAnchor] setActive:YES];

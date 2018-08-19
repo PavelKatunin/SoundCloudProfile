@@ -27,7 +27,7 @@
 @property (nonatomic, strong, nullable) UIImage *image;
 @property (nonatomic, strong, nullable) NSArray<SCTrack *> *tracks;
 
-- (void)showError;
+- (void)showErrorText:(NSString *)errorText;
 - (void)stopRefreshing;
 
 @end

@@ -2,6 +2,7 @@
 #import "SCUserInfoView.h"
 #import "SCTrackTableViewCell.h"
 #import "SCTrack.h"
+#import "UIViewController+Toast.h"
 
 static NSString *const kTrackCellId = @"TrackCell";
 static const CGFloat kFavoritesTitleLabelFontSize = 17.;
@@ -49,8 +50,8 @@ static const CGFloat kTrackCellHeight = 84.;
     [self updateUserInfoView];
 }
 
-- (void)showError {
-    //TODO: IMplement
+- (void)showErrorText:(NSString *)errorText; {
+    [self showToastWithMessage:errorText];
     [self.refreshControl endRefreshing];
 }
 

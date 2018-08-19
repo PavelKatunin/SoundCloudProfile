@@ -15,6 +15,7 @@
 		7613ECBD212702C1009F9CDA /* SCAsynchronousOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7613ECBC212702C1009F9CDA /* SCAsynchronousOperation.m */; };
 		7613ECC12127102E009F9CDA /* SCDownloadDataOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7613ECC02127102E009F9CDA /* SCDownloadDataOperation.m */; };
 		7613ECC42127140D009F9CDA /* SCGetUserWithImageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7613ECC32127140D009F9CDA /* SCGetUserWithImageOperation.m */; };
+		7613ECC7212809C9009F9CDA /* UIViewController+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 7613ECC6212809C9009F9CDA /* UIViewController+Toast.m */; };
 		761507A021206FA10016E397 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7615079F21206FA10016E397 /* AppDelegate.m */; };
 		761507A621206FA10016E397 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 761507A421206FA10016E397 /* Main.storyboard */; };
 		761507A821206FA20016E397 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 761507A721206FA20016E397 /* Assets.xcassets */; };
@@ -87,6 +88,8 @@
 		7613ECC02127102E009F9CDA /* SCDownloadDataOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCDownloadDataOperation.m; sourceTree = "<group>"; };
 		7613ECC22127140D009F9CDA /* SCGetUserWithImageOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCGetUserWithImageOperation.h; sourceTree = "<group>"; };
 		7613ECC32127140D009F9CDA /* SCGetUserWithImageOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCGetUserWithImageOperation.m; sourceTree = "<group>"; };
+		7613ECC5212809C9009F9CDA /* UIViewController+Toast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Toast.h"; sourceTree = "<group>"; };
+		7613ECC6212809C9009F9CDA /* UIViewController+Toast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Toast.m"; sourceTree = "<group>"; };
 		7615079B21206FA10016E397 /* SoundCloudProfile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundCloudProfile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7615079E21206FA10016E397 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7615079F21206FA10016E397 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -529,6 +532,8 @@
 				76729CF2212164C100F720BA /* NSDictionary+HTTP.m */,
 				76729CF4212168A300F720BA /* NSString+HTTP.h */,
 				76729CF5212168A300F720BA /* NSString+HTTP.m */,
+				7613ECC5212809C9009F9CDA /* UIViewController+Toast.h */,
+				7613ECC6212809C9009F9CDA /* UIViewController+Toast.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -780,6 +785,7 @@
 				7613ECC42127140D009F9CDA /* SCGetUserWithImageOperation.m in Sources */,
 				76BD60822124A81A00F8A795 /* SCUserJSONParser.m in Sources */,
 				7613EC282126A4F0009F9CDA /* SCTrackView.m in Sources */,
+				7613ECC7212809C9009F9CDA /* UIViewController+Toast.m in Sources */,
 				7617139F2125E03900CBD992 /* SCProfileInfoPresenter.m in Sources */,
 				7613ECB92127009C009F9CDA /* SCFloatingBackgroundView.m in Sources */,
 				761507EA212071F40016E397 /* SCServices.m in Sources */,

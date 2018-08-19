@@ -52,7 +52,8 @@ static const NSTimeInterval kUpdateProfileInterval = 120;
                                         });
                                     } fail:^(NSError *error) {
                                         dispatch_async(dispatch_get_main_queue(), ^{
-                                            [weakSelf.view showError];
+                                            [weakSelf.view showErrorText:NSLocalizedString(@" Updating profile error ",
+                                                                                           nil)];
                                             [weakSelf.view stopRefreshing];
                                         });
                                     }];

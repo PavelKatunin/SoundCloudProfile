@@ -2,9 +2,9 @@
 
 @interface SCDownloadDataOperation ()
 
-@property (nonatomic, strong, nullable) NSData *data;
-@property (nonatomic, strong, nullable) NSError *error;
-@property (nonatomic, strong, nonnull ) id <SCHTTPService> httpService;
+@property (strong, nullable) NSData *data;
+@property (strong, nullable) NSError *error;
+@property (strong, nonnull ) id <SCHTTPService> httpService;
 
 @end
 

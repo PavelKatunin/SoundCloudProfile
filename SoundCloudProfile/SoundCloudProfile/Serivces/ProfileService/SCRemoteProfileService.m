@@ -2,6 +2,7 @@
 #import "SCGetUserOperation.h"
 #import "SCGetFavoritTracksOperation.h"
 #import "SCDownloadDataOperation.h"
+#import "SCGetFavoritTracksWithImagesOperation.h"
 
 @interface SCRemoteProfileService ()
 
@@ -40,9 +41,10 @@
         [[SCGetUserOperation alloc] initWithUserService:self.userService
                                                  userId:identifier];
     
-    SCGetFavoritTracksOperation *getTracksOperation =
-        [[SCGetFavoritTracksOperation alloc] initWithTracksService:self.tracksService
-                                                            userId:identifier];
+    SCGetFavoritTracksWithImagesOperation *getTracksOperation =
+        [[SCGetFavoritTracksWithImagesOperation alloc] initWithTracksService:self.tracksService
+                                                                      userId:identifier
+                                                                 httpService:self.httpService];
     
     SCDownloadDataOperation *downloadImageOperation =
         [[SCDownloadDataOperation alloc] initWithHttpService:self.httpService url:nil];

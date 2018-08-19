@@ -27,7 +27,8 @@
                                                 duration:@(18000)
                                                  artwork:artwork
                                                    genre:@"Rock"
-                                          durationString:@"10:10"];
+                                          durationString:@"10:10"
+                                        artworkImageData:nil];
     
     SCProfile *profile = [[SCProfile alloc] initWithUser:user
                                                   tracks:@[track]

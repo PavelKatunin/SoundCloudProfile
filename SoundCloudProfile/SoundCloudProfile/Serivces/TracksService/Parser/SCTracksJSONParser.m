@@ -3,7 +3,7 @@
 static NSString *const kIdentifierKey = @"id";
 static NSString *const kTitleKey = @"title";
 static NSString *const kDurationKey = @"duration";
-static NSString *const kArtworkKey = @"artwork";
+static NSString *const kArtworkKey = @"artwork_url";
 static NSString *const kGenreKey = @"genre";
 
 @implementation SCTracksJSONParser
@@ -90,7 +90,10 @@ static NSString *const kGenreKey = @"genre";
     NSNumber *duration = dictionary[kDurationKey];
     NSString *genre = dictionary[kGenreKey];
     NSString *artworkUrlString = dictionary[kArtworkKey];
-    NSURL *artwork = [NSURL URLWithString:artworkUrlString];
+    NSURL *artwork = nil;
+    if (artworkUrlString != nil && ![artworkUrlString isKindOfClass:[NSNull class]]) {
+         artwork = [NSURL URLWithString:artworkUrlString];
+    }
     NSString *durationString = [self timeFormatted:duration.intValue];
     
     if (identifier != nil && title != nil) {
@@ -99,7 +102,8 @@ static NSString *const kGenreKey = @"genre";
                                            duration:duration
                                             artwork:artwork
                                               genre:genre
-                                     durationString:durationString];
+                                     durationString:durationString
+                                   artworkImageData:nil];
     }
     else {
         *error = [NSError errorWithDomain:kTracksParserErrorDomain

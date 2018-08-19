@@ -16,6 +16,9 @@
 		7613ECC12127102E009F9CDA /* SCDownloadDataOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7613ECC02127102E009F9CDA /* SCDownloadDataOperation.m */; };
 		7613ECC42127140D009F9CDA /* SCGetUserWithImageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7613ECC32127140D009F9CDA /* SCGetUserWithImageOperation.m */; };
 		7613ECC7212809C9009F9CDA /* UIViewController+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 7613ECC6212809C9009F9CDA /* UIViewController+Toast.m */; };
+		7613ECCA2129CBD1009F9CDA /* SCGetFavoritTracksWithImagesOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7613ECC92129CBD1009F9CDA /* SCGetFavoritTracksWithImagesOperation.m */; };
+		7613ECCD2129CDEA009F9CDA /* SCMutableTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 7613ECCC2129CDEA009F9CDA /* SCMutableTrack.m */; };
+		7613ECD02129DC61009F9CDA /* SCDownloadGroupDataOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7613ECCF2129DC61009F9CDA /* SCDownloadGroupDataOperation.m */; };
 		761507A021206FA10016E397 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7615079F21206FA10016E397 /* AppDelegate.m */; };
 		761507A621206FA10016E397 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 761507A421206FA10016E397 /* Main.storyboard */; };
 		761507A821206FA20016E397 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 761507A721206FA20016E397 /* Assets.xcassets */; };
@@ -90,6 +93,12 @@
 		7613ECC32127140D009F9CDA /* SCGetUserWithImageOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCGetUserWithImageOperation.m; sourceTree = "<group>"; };
 		7613ECC5212809C9009F9CDA /* UIViewController+Toast.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Toast.h"; sourceTree = "<group>"; };
 		7613ECC6212809C9009F9CDA /* UIViewController+Toast.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Toast.m"; sourceTree = "<group>"; };
+		7613ECC82129CBD1009F9CDA /* SCGetFavoritTracksWithImagesOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCGetFavoritTracksWithImagesOperation.h; sourceTree = "<group>"; };
+		7613ECC92129CBD1009F9CDA /* SCGetFavoritTracksWithImagesOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCGetFavoritTracksWithImagesOperation.m; sourceTree = "<group>"; };
+		7613ECCB2129CDEA009F9CDA /* SCMutableTrack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCMutableTrack.h; sourceTree = "<group>"; };
+		7613ECCC2129CDEA009F9CDA /* SCMutableTrack.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCMutableTrack.m; sourceTree = "<group>"; };
+		7613ECCE2129DC61009F9CDA /* SCDownloadGroupDataOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCDownloadGroupDataOperation.h; sourceTree = "<group>"; };
+		7613ECCF2129DC61009F9CDA /* SCDownloadGroupDataOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCDownloadGroupDataOperation.m; sourceTree = "<group>"; };
 		7615079B21206FA10016E397 /* SoundCloudProfile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundCloudProfile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7615079E21206FA10016E397 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7615079F21206FA10016E397 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -230,6 +239,8 @@
 			children = (
 				7613ECBF2127102E009F9CDA /* SCDownloadDataOperation.h */,
 				7613ECC02127102E009F9CDA /* SCDownloadDataOperation.m */,
+				7613ECCE2129DC61009F9CDA /* SCDownloadGroupDataOperation.h */,
+				7613ECCF2129DC61009F9CDA /* SCDownloadGroupDataOperation.m */,
 			);
 			path = Operations;
 			sourceTree = "<group>";
@@ -403,6 +414,8 @@
 			children = (
 				761507FC212075250016E397 /* SCTrack.h */,
 				761507FD212075250016E397 /* SCTrack.m */,
+				7613ECCB2129CDEA009F9CDA /* SCMutableTrack.h */,
+				7613ECCC2129CDEA009F9CDA /* SCMutableTrack.m */,
 			);
 			path = Track;
 			sourceTree = "<group>";
@@ -448,6 +461,8 @@
 			children = (
 				76150808212075B50016E397 /* SCGetFavoritTracksOperation.h */,
 				76150809212075B50016E397 /* SCGetFavoritTracksOperation.m */,
+				7613ECC82129CBD1009F9CDA /* SCGetFavoritTracksWithImagesOperation.h */,
+				7613ECC92129CBD1009F9CDA /* SCGetFavoritTracksWithImagesOperation.m */,
 			);
 			path = Operations;
 			sourceTree = "<group>";
@@ -787,10 +802,12 @@
 				7613EC282126A4F0009F9CDA /* SCTrackView.m in Sources */,
 				7613ECC7212809C9009F9CDA /* UIViewController+Toast.m in Sources */,
 				7617139F2125E03900CBD992 /* SCProfileInfoPresenter.m in Sources */,
+				7613ECCD2129CDEA009F9CDA /* SCMutableTrack.m in Sources */,
 				7613ECB92127009C009F9CDA /* SCFloatingBackgroundView.m in Sources */,
 				761507EA212071F40016E397 /* SCServices.m in Sources */,
 				76BD606B21248C0F00F8A795 /* SCTracksJSONParser.m in Sources */,
 				7613ECC12127102E009F9CDA /* SCDownloadDataOperation.m in Sources */,
+				7613ECCA2129CBD1009F9CDA /* SCGetFavoritTracksWithImagesOperation.m in Sources */,
 				7613EC2121261D8D009F9CDA /* SCTrackTableViewCell.m in Sources */,
 				761507FB212075090016E397 /* SCProfile.m in Sources */,
 				7613EC252126A2CF009F9CDA /* SCProfileInfoRouter.m in Sources */,
@@ -798,6 +815,7 @@
 				7613ECBD212702C1009F9CDA /* SCAsynchronousOperation.m in Sources */,
 				761507E52120715E0016E397 /* SCRemoteHTTPService.m in Sources */,
 				761507E2212071470016E397 /* SCRemoteProfileService.m in Sources */,
+				7613ECD02129DC61009F9CDA /* SCDownloadGroupDataOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

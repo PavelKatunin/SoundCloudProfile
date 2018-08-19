@@ -12,6 +12,9 @@
 @property (nonatomic, copy, nullable) NSURL *artwork;
 @property (nonatomic, copy, nullable) NSString *genre;
 
+//TODO: Implement mutable track
+//@property (nonatomic, strong, nullable) NSData *artworkImageData;
+
 @end
 
 @implementation SCTrack
@@ -23,7 +26,8 @@
                           duration:(nullable NSNumber *)duration
                            artwork:(nullable NSURL *)artwork
                              genre:(nullable NSString *)genre
-                    durationString:(nullable NSString *)durationString {
+                    durationString:(nullable NSString *)durationString
+                  artworkImageData:(nullable NSData *)artworkImageData {
     self = [super init];
     if (self != nil) {
         self.identifier = identifier;
@@ -32,6 +36,7 @@
         self.artwork = artwork;
         self.genre = genre;
         self.durationString = durationString;
+        self.artworkImageData = artworkImageData;
     }
     return self;
 }

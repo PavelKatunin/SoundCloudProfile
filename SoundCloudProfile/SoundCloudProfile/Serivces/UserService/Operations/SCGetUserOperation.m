@@ -2,10 +2,10 @@
 
 @interface SCGetUserOperation ()
 
-@property (nonatomic, strong, nonnull) id <SCUserService> userService;
-@property (nonatomic, copy, nonnull) NSNumber *userId;
-@property (nonatomic, strong, nullable) SCUser *user;
-@property (nonatomic, strong, nullable) NSError *error;
+@property (strong, nonnull) id <SCUserService> userService;
+@property (copy, nonnull) NSNumber *userId;
+@property (strong, nullable) SCUser *user;
+@property (strong, nullable) NSError *error;
 
 @end
 

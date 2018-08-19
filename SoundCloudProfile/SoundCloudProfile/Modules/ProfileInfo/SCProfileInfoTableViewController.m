@@ -81,6 +81,11 @@ static const CGFloat kTrackCellHeight = 84.;
     trackCell.trackView.titleLabel.text = track.title;
     trackCell.trackView.durationLabel.text = track.durationString;
     trackCell.trackView.genreLabel.text = track.genre;
+    
+    if (track.artworkImageData != nil) {
+        UIImage *image = [UIImage imageWithData:track.artworkImageData];
+        trackCell.trackView.artworkImageView.image = image;
+    }
     return trackCell;
 }
 

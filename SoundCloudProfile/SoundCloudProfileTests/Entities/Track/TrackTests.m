@@ -16,7 +16,8 @@
                                                 duration:@(18000)
                                                  artwork:artwork
                                                    genre:@"Rock"
-                                          durationString:@"10:10"];
+                                          durationString:@"10:10"
+                                        artworkImageData:nil];
     XCTAssertNotNil(track.identifier);
     XCTAssertNotNil(track.title);
     XCTAssertNotNil(track.duration);
@@ -31,7 +32,8 @@
                                                 duration:nil
                                                  artwork:nil
                                                    genre:nil
-                                          durationString:nil];
+                                          durationString:nil
+                                        artworkImageData:nil];
     XCTAssertNotNil(track.identifier);
     XCTAssertNotNil(track.title);
     XCTAssertNil(track.duration);

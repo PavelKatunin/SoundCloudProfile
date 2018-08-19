@@ -5,11 +5,11 @@
 @interface SCDownloadDataOperation : SCAsynchronousOperation
 
 //input
-@property (nonatomic, copy, nonnull) NSURL *url;
+@property (copy, nonnull) NSURL *url;
 
 //output
-@property (nonatomic, readonly, nullable) NSData *data;
-@property (nonatomic, readonly, nullable) NSError *error;
+@property (readonly, nullable) NSData *data;
+@property (readonly, nullable) NSError *error;
 
 - (instancetype)initWithHttpService:(nonnull id <SCHTTPService>)httpService
                                 url:(nullable NSURL *)url;

@@ -5,11 +5,11 @@
 @interface SCGetUserOperation : SCAsynchronousOperation
 
 //input
-@property (nonatomic, readonly, nonnull) NSNumber *userId;
+@property (readonly, nonnull) NSNumber *userId;
 
 //output
-@property (nonatomic, readonly, nullable) SCUser *user;
-@property (nonatomic, readonly, nullable) NSError *error;
+@property (readonly, nullable) SCUser *user;
+@property (readonly, nullable) NSError *error;
 
 - (instancetype)initWithUserService:(nonnull id <SCUserService>)userService
                              userId:(nonnull NSNumber *)userId;

@@ -12,11 +12,15 @@
 @property (nonatomic, readonly, nullable) NSURL *artwork;
 @property (nonatomic, readonly, nullable) NSString *genre;
 
+//TODO: Implement mutable track
+@property (nonatomic, nullable) NSData *artworkImageData;
+
 - (instancetype)initWithIdentifier:(nonnull NSNumber *)identifier
                              title:(nonnull NSString *)title
                           duration:(nullable NSNumber *)duration
                            artwork:(nullable NSURL *)artwork
                              genre:(nullable NSString *)genre
-                    durationString:(nullable NSString *)durationString;
+                    durationString:(nullable NSString *)durationString
+                  artworkImageData:(nullable NSData *)artworkImageData;
 
 @end

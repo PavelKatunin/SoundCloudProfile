@@ -2,10 +2,10 @@
 
 @interface SCGetFavoritTracksOperation ()
 
-@property (nonatomic, strong, nonnull) id <SCTracksService> tracksService;
-@property (nonatomic, copy, nonnull) NSNumber *userId;
-@property (nonatomic, strong, nullable) NSArray<SCTrack *> *tracks;
-@property (nonatomic, strong, nullable) NSError *error;
+@property (strong, nonnull) id <SCTracksService> tracksService;
+@property (copy, nonnull) NSNumber *userId;
+@property (strong, nullable) NSArray<SCTrack *> *tracks;
+@property (strong, nullable) NSError *error;
 
 @end
 

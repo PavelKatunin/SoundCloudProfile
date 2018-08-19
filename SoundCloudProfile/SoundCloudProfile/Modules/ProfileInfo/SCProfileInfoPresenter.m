@@ -1,7 +1,7 @@
 #import "SCProfileInfoPresenter.h"
 
 //492436158
-static const int kUserId = 492436158;
+static const int kUserId = 1050063;
 static const NSTimeInterval kUpdateProfileInterval = 120;
 
 @interface SCProfileInfoPresenter ()

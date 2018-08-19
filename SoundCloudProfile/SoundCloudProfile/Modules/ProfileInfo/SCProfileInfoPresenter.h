@@ -9,5 +9,6 @@
                                httpService:(id <SCHTTPService>)httpService;
 
 @property (nonatomic, weak) id <SCProfileInfoViewProtocol> view;
+@property (nonatomic, strong) id <SCProfileInfoRouterProtocol> router;
 
 @end

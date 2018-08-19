@@ -1,5 +1,6 @@
-#import <Foundation/Foundation.h>
 #import "SCProfile.h"
+#import <Foundation/Foundation.h>
+
 
 typedef void (^SCProfileSuccess)(SCProfile *profile);
 typedef void (^SCProfileFail)(NSError *error);

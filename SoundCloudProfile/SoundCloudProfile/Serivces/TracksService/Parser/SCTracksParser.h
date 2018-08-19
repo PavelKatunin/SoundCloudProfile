@@ -1,5 +1,5 @@
-#import <Foundation/Foundation.h>
 #import "SCTrack.h"
+#import <Foundation/Foundation.h>
 
 typedef enum : NSUInteger {
     kSCIncorrectTracksFormat,

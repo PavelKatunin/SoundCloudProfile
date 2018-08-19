@@ -1,6 +1,6 @@
 #import "SCAsynchronousOperation.h"
 
-@interface SCAsynchronousOperation()
+@interface SCAsynchronousOperation ()
 // 'executing' and 'finished' exist in NSOperation, but are readonly
 @property (atomic, assign) BOOL _executing;
 @property (atomic, assign) BOOL _finished;

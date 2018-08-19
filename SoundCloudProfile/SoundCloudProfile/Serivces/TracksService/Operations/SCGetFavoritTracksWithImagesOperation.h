@@ -1,8 +1,8 @@
-#import <Foundation/Foundation.h>
 #import "SCAsynchronousOperation.h"
 #import "SCTrack.h"
 #import "SCTracksService.h"
 #import "SCHTTPService.h"
+#import <Foundation/Foundation.h>
 
 @interface SCGetFavoritTracksWithImagesOperation : SCAsynchronousOperation
 

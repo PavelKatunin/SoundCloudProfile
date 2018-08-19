@@ -1,5 +1,5 @@
-#import <UIKit/UIKit.h>
 #import "SCTrackView.h"
+#import <UIKit/UIKit.h>
 
 @interface SCTrackTableViewCell : UITableViewCell
 

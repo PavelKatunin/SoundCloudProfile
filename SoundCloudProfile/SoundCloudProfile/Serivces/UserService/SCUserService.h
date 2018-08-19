@@ -1,5 +1,5 @@
-#import <Foundation/Foundation.h>
 #import "SCUser.h"
+#import <Foundation/Foundation.h>
 
 typedef void (^SCUserSuccess)(SCUser *user);
 typedef void (^SCUserFail)(NSError *error);

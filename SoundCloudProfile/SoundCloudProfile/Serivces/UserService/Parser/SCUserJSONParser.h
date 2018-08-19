@@ -1,5 +1,5 @@
-#import <Foundation/Foundation.h>
 #import "SCUserParser.h"
+#import <Foundation/Foundation.h>
 
 @interface SCUserJSONParser : NSObject <SCUserParser>
 

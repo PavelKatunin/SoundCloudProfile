@@ -1,9 +1,9 @@
-#import <Foundation/Foundation.h>
 #import "SCAuthenticationService.h"
 #import "SCTracksParser.h"
 #import "SCHTTPService.h"
 #import "SCTracksService.h"
 #import "SCEnvironmentService.h"
+#import <Foundation/Foundation.h>
 
 @interface SCRemoteTracksService : NSObject <SCTracksService>
 

@@ -1,9 +1,9 @@
-#import <Foundation/Foundation.h>
 #import "SCEnvironmentService.h"
 #import "SCAuthenticationService.h"
 #import "SCHTTPService.h"
 #import "SCUserService.h"
 #import "SCUserParser.h"
+#import <Foundation/Foundation.h>
 
 @interface SCRemoteUserService : NSObject <SCUserService>
 

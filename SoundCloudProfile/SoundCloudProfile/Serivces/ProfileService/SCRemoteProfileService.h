@@ -1,8 +1,8 @@
-#import <Foundation/Foundation.h>
 #import "SCProfileService.h"
 #import "SCUserService.h"
 #import "SCTracksService.h"
 #import "SCHTTPService.h"
+#import <Foundation/Foundation.h>
 
 @interface SCRemoteProfileService : NSObject <SCProfileService>
 

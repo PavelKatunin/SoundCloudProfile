@@ -1,6 +1,6 @@
-#import <UIKit/UIKit.h>
 #import "SCProfile.h"
 #import "SCProfileInfoProtocols.h"
+#import <UIKit/UIKit.h>
 
 @interface SCProfileInfoTableViewController : UITableViewController <SCProfileInfoViewProtocol>
 

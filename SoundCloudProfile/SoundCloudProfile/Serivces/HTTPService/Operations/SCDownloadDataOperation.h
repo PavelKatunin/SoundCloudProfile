@@ -1,6 +1,6 @@
-#import <Foundation/Foundation.h>
 #import "SCHTTPService.h"
 #import "SCAsynchronousOperation.h"
+#import <Foundation/Foundation.h>
 
 @interface SCDownloadDataOperation : SCAsynchronousOperation
 

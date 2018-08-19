@@ -1,5 +1,5 @@
-#import <UIKit/UIKit.h>
 #import "SCFloatingBackgroundView.h"
+#import <UIKit/UIKit.h>
 
 @interface SCUserInfoView : UIView
 

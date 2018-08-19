@@ -1,5 +1,5 @@
-#import <Foundation/Foundation.h>
 #import "SCUser.h"
+#import <Foundation/Foundation.h>
 
 typedef enum : NSUInteger {
     kSCIncorrectUserFormat,

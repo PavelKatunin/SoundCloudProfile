@@ -1,6 +1,6 @@
-#import <Foundation/Foundation.h>
 #import "SCProfile.h"
 #import "SCTrack.h"
+#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
 @protocol SCProfileInfoInput <NSObject>

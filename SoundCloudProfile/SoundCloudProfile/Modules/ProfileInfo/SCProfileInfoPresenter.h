@@ -1,7 +1,7 @@
-#import <Foundation/Foundation.h>
 #import "SCProfileInfoProtocols.h"
 #import "SCProfileService.h"
 #import "SCHTTPService.h"
+#import <Foundation/Foundation.h>
 
 @interface SCProfileInfoPresenter : NSObject <SCProfileInfoPresenterProtocol>
 

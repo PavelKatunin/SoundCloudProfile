@@ -1,8 +1,8 @@
-#import <Foundation/Foundation.h>
 #import "SCUserService.h"
 #import "SCTracksService.h"
 #import "SCProfileService.h"
 #import "SCHTTPService.h"
+#import <Foundation/Foundation.h>
 
 @protocol SCServicesProvider <NSObject>
 

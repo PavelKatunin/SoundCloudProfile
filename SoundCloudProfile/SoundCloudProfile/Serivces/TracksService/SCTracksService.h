@@ -1,5 +1,5 @@
-#import <Foundation/Foundation.h>
 #import "SCTrack.h"
+#import <Foundation/Foundation.h>
 
 typedef void (^SCTracksSuccess)(NSArray<SCTrack *> *tracks);
 typedef void (^SCTracksFail)(NSError *error);

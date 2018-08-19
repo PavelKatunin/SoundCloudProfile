@@ -55,6 +55,8 @@
 		76BD607B212492F000F8A795 /* TracksJSONParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BD607A212492F000F8A795 /* TracksJSONParserTests.m */; };
 		76BD607D2124932800F8A795 /* SCUserJSONParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BD607C2124932800F8A795 /* SCUserJSONParserTests.m */; };
 		76BD60822124A81A00F8A795 /* SCUserJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BD60812124A81A00F8A795 /* SCUserJSONParser.m */; };
+		76EDFC992129EEEC009D8006 /* SCUserParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 76EDFC982129EEEC009D8006 /* SCUserParser.m */; };
+		76EDFC9B2129EF6E009D8006 /* SCTracksParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 76EDFC9A2129EF6E009D8006 /* SCTracksParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -170,6 +172,8 @@
 		76BD607F2124A80600F8A795 /* SCUserParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCUserParser.h; sourceTree = "<group>"; };
 		76BD60802124A81A00F8A795 /* SCUserJSONParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCUserJSONParser.h; sourceTree = "<group>"; };
 		76BD60812124A81A00F8A795 /* SCUserJSONParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCUserJSONParser.m; sourceTree = "<group>"; };
+		76EDFC982129EEEC009D8006 /* SCUserParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCUserParser.m; sourceTree = "<group>"; };
+		76EDFC9A2129EF6E009D8006 /* SCTracksParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCTracksParser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -396,6 +400,7 @@
 				761507ED212072350016E397 /* SCTracksParser.h */,
 				76BD606921248C0F00F8A795 /* SCTracksJSONParser.h */,
 				76BD606A21248C0F00F8A795 /* SCTracksJSONParser.m */,
+				76EDFC9A2129EF6E009D8006 /* SCTracksParser.m */,
 			);
 			path = Parser;
 			sourceTree = "<group>";
@@ -646,6 +651,7 @@
 				76BD607F2124A80600F8A795 /* SCUserParser.h */,
 				76BD60802124A81A00F8A795 /* SCUserJSONParser.h */,
 				76BD60812124A81A00F8A795 /* SCUserJSONParser.m */,
+				76EDFC982129EEEC009D8006 /* SCUserParser.m */,
 			);
 			path = Parser;
 			sourceTree = "<group>";
@@ -802,6 +808,7 @@
 				7613EC282126A4F0009F9CDA /* SCTrackView.m in Sources */,
 				7613ECC7212809C9009F9CDA /* UIViewController+Toast.m in Sources */,
 				7617139F2125E03900CBD992 /* SCProfileInfoPresenter.m in Sources */,
+				76EDFC992129EEEC009D8006 /* SCUserParser.m in Sources */,
 				7613ECCD2129CDEA009F9CDA /* SCMutableTrack.m in Sources */,
 				7613ECB92127009C009F9CDA /* SCFloatingBackgroundView.m in Sources */,
 				761507EA212071F40016E397 /* SCServices.m in Sources */,
@@ -813,6 +820,7 @@
 				7613EC252126A2CF009F9CDA /* SCProfileInfoRouter.m in Sources */,
 				76729CF3212164C100F720BA /* NSDictionary+HTTP.m in Sources */,
 				7613ECBD212702C1009F9CDA /* SCAsynchronousOperation.m in Sources */,
+				76EDFC9B2129EF6E009D8006 /* SCTracksParser.m in Sources */,
 				761507E52120715E0016E397 /* SCRemoteHTTPService.m in Sources */,
 				761507E2212071470016E397 /* SCRemoteProfileService.m in Sources */,
 				7613ECD02129DC61009F9CDA /* SCDownloadGroupDataOperation.m in Sources */,

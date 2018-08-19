@@ -16,7 +16,7 @@
     self = [super init];
     if (self != nil) {
         NSURLSessionConfiguration *config = NSURLSessionConfiguration.defaultSessionConfiguration;
-        config.timeoutIntervalForRequest = 15.0;
+        config.timeoutIntervalForRequest = 10.0;
         config.timeoutIntervalForResource = 60.0;
         self.session = [NSURLSession sessionWithConfiguration:config];
     }
@@ -54,7 +54,7 @@
 
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:requestUrl
                                                                 cachePolicy:NSURLRequestReloadIgnoringCacheData
-                                                            timeoutInterval:15.0];
+                                                            timeoutInterval:10.0];
     request.HTTPMethod = @"GET";
     request.allHTTPHeaderFields = headers;
     

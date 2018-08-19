@@ -7,8 +7,7 @@ typedef enum : NSUInteger {
     kSCNoRequiredUserFields
 } SCUserParserError;
 
-//TODO: move to m
-static NSString *const kUserParserErrorDomain = @"user.parser.scoundCloud";
+extern NSString *const kUserParserErrorDomain;
 
 @protocol SCUserParser <NSObject>
 

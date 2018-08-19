@@ -51,9 +51,9 @@
     requestUrlString = [@"\?" stringByAppendingString:requestUrlString];
 
     NSURL *requestUrl = [NSURL URLWithString:[url.absoluteString stringByAppendingString:requestUrlString]];
-    
+
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:requestUrl
-                                                                cachePolicy:NSURLRequestReloadIgnoringLocalCacheData
+                                                                cachePolicy:NSURLRequestReloadIgnoringCacheData
                                                             timeoutInterval:15.0];
     request.HTTPMethod = @"GET";
     request.allHTTPHeaderFields = headers;

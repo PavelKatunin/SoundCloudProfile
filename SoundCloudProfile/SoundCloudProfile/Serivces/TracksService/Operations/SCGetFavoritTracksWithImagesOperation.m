@@ -59,6 +59,7 @@
             __weak SCDownloadGroupDataOperation *weakDownloadImagesOperation = downloadImagesOperation;
             downloadImagesOperation.completionBlock = ^{
                 [tracks enumerateObjectsUsingBlock:^(SCTrack * _Nonnull track, NSUInteger idx, BOOL * _Nonnull stop) {
+                    //TODO: Use mutable copy of track
                     track.artworkImageData = weakDownloadImagesOperation.groupData[track.artwork];
                 }];
                 weakSelf.tracks = tracks;

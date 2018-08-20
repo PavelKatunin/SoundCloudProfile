@@ -58,6 +58,7 @@
 		76EDFC992129EEEC009D8006 /* SCUserParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 76EDFC982129EEEC009D8006 /* SCUserParser.m */; };
 		76EDFC9B2129EF6E009D8006 /* SCTracksParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 76EDFC9A2129EF6E009D8006 /* SCTracksParser.m */; };
 		76EDFC9E2129FC60009D8006 /* SCGetProfileOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 76EDFC9D2129FC60009D8006 /* SCGetProfileOperation.m */; };
+		76EDFCA1212A981E009D8006 /* UIView+Constraints.m in Sources */ = {isa = PBXBuildFile; fileRef = 76EDFCA0212A981E009D8006 /* UIView+Constraints.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -177,6 +178,8 @@
 		76EDFC9A2129EF6E009D8006 /* SCTracksParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCTracksParser.m; sourceTree = "<group>"; };
 		76EDFC9C2129FC60009D8006 /* SCGetProfileOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCGetProfileOperation.h; sourceTree = "<group>"; };
 		76EDFC9D2129FC60009D8006 /* SCGetProfileOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCGetProfileOperation.m; sourceTree = "<group>"; };
+		76EDFC9F212A981E009D8006 /* UIView+Constraints.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Constraints.h"; sourceTree = "<group>"; };
+		76EDFCA0212A981E009D8006 /* UIView+Constraints.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Constraints.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -559,6 +562,8 @@
 				76729CF5212168A300F720BA /* NSString+HTTP.m */,
 				7613ECC5212809C9009F9CDA /* UIViewController+Toast.h */,
 				7613ECC6212809C9009F9CDA /* UIViewController+Toast.m */,
+				76EDFC9F212A981E009D8006 /* UIView+Constraints.h */,
+				76EDFCA0212A981E009D8006 /* UIView+Constraints.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -810,6 +815,7 @@
 				76729CF6212168A300F720BA /* NSString+HTTP.m in Sources */,
 				761507FE212075250016E397 /* SCTrack.m in Sources */,
 				7613ECC42127140D009F9CDA /* SCGetUserWithImageOperation.m in Sources */,
+				76EDFCA1212A981E009D8006 /* UIView+Constraints.m in Sources */,
 				76BD60822124A81A00F8A795 /* SCUserJSONParser.m in Sources */,
 				7613EC282126A4F0009F9CDA /* SCTrackView.m in Sources */,
 				7613ECC7212809C9009F9CDA /* UIViewController+Toast.m in Sources */,

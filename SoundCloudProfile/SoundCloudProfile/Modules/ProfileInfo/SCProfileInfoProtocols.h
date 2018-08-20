@@ -5,13 +5,15 @@
 
 @protocol SCProfileInfoInput <NSObject>
 
+@property (nonatomic, copy) NSNumber *userId;
+
 @end
 
 @protocol SCProfileInfoViewProtocol;
 
 @protocol SCProfileInfoRouterProtocol
 
-+ (UIViewController<SCProfileInfoViewProtocol> *)createProfileController;
++ (UIViewController<SCProfileInfoViewProtocol> *)createProfileControllerWithUserId:(NSNumber *)userId;
 
 @end
 

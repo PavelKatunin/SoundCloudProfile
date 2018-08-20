@@ -6,7 +6,7 @@
 
 @implementation SCProfileInfoRouter
 
-+ (UIViewController<SCProfileInfoViewProtocol> *)createProfileController {
++ (UIViewController<SCProfileInfoViewProtocol> *)createProfileControllerWithUserId:(NSNumber *)userId {
     SCServices *services = [SCServices shared];
     
     SCProfileInfoPresenter *presenter =
@@ -16,6 +16,8 @@
     [[SCProfileInfoTableViewController alloc] initWithStyle:UITableViewStylePlain];
     controller.presenter = presenter;
     presenter.view = controller;
+    presenter.userId = userId;
+    presenter.router = [[SCProfileInfoRouter alloc] init];
     return controller;
 }
 

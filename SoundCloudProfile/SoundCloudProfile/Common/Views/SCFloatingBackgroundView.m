@@ -17,8 +17,8 @@ NSArray *DefaultGradientColors() {
              ];
 }
 
-static const CGFloat kMinimumBubbleRadius = 30;
-static const CGFloat kMaximumBubbleRadius = 100;
+static const CGFloat kMinimumBubbleRadius = 30.;
+static const CGFloat kMaximumBubbleRadius = 100.;
 
 // TODO: implement animations
 

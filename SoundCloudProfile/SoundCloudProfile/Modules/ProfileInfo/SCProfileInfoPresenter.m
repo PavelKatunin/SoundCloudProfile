@@ -1,7 +1,5 @@
 #import "SCProfileInfoPresenter.h"
 
-//492436158
-static const int kUserId = 1050063;
 static const NSTimeInterval kUpdateProfileInterval = 120;
 
 @interface SCProfileInfoPresenter ()
@@ -43,7 +41,7 @@ static const NSTimeInterval kUpdateProfileInterval = 120;
 
 - (void)stratUpdatingProfile {
     __weak SCProfileInfoPresenter *weakSelf = self;
-    [self.profileService getProfileByUserId:@(kUserId)
+    [self.profileService getProfileByUserId:self.userId
                                     success:^(SCProfile *profile) {
                                         dispatch_async(dispatch_get_main_queue(), ^{
                                             weakSelf.profile = profile;

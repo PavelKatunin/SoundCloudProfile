@@ -1,6 +1,10 @@
 #import "AppDelegate.h"
 #import "SCProfileInfoRouter.h"
 
+
+//492436158
+static const int kUserId = 1050063;
+
 @interface AppDelegate ()
 
 @end
@@ -9,7 +13,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    UIViewController *controller = [SCProfileInfoRouter createProfileController];
+    UIViewController *controller = [SCProfileInfoRouter createProfileControllerWithUserId:@(kUserId)];
     self.window.rootViewController = controller;
     return YES;
 }

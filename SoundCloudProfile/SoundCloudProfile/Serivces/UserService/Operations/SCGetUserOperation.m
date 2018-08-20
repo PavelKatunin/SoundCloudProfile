@@ -29,11 +29,9 @@
     [self.userService getUserById:self.userId
                           success:^(SCUser *user) {
                               self.user = user;
-                              NSLog(@"%@", self.user.fullName);
                               [self completeOperation];
                           } fail:^(NSError *error) {
                               self.error = error;
-                              NSLog(@"%@", error);
                               [self completeOperation];
                           }];
 }

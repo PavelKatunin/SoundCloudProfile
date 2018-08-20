@@ -2,4 +2,6 @@
 
 @interface SCMutableTrack : NSObject
 
+//TODO: Implement
+
 @end

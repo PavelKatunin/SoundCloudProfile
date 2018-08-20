@@ -10,5 +10,6 @@
 
 @property (nonatomic, weak) id <SCProfileInfoViewProtocol> view;
 @property (nonatomic, strong) id <SCProfileInfoRouterProtocol> router;
+@property (nonatomic, copy) NSNumber *userId;
 
 @end

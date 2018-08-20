@@ -49,8 +49,8 @@
                 if (track.artwork != nil) {
                     [urls addObject:track.artwork];
                 }
-                
             }];
+            
             SCDownloadGroupDataOperation *downloadImagesOperation =
                 [[SCDownloadGroupDataOperation alloc] initWithHttpService:self.httpService];
             downloadImagesOperation.urls = urls;
